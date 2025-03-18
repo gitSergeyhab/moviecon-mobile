@@ -1,20 +1,27 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { useEffect } from "react";
+import "react-native-reanimated";
+import { store } from "@/store";
+import { fetchUser } from "@/store/user/thunks";
+import { Providers } from "@/lib/providers/Providers";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { ThemeProvider } from "@/lib/providers/ThemeProvider";
+import { StatusBar } from "expo-status-bar";
+import { useSelector } from "react-redux";
+import { getUserStatus } from "@/store/user/selectors";
+// import { useColorScheme } from "@/hooks/useColorScheme.web";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+store.dispatch(fetchUser());
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
+const RootLayout = () => {
+  // const colorScheme = useColorScheme();
+  const requestUserStatus = useSelector(getUserStatus);
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
 
   useEffect(() => {
@@ -23,17 +30,28 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  if (!loaded) {
+  if (!loaded || requestUserStatus === "loading") {
     return null;
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
+    <ThemeProvider>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#311a1a" }}>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+          <Stack.Screen name="auth" options={{ headerShown: false }} />
+        </Stack>
+        <StatusBar style="light" />
+      </SafeAreaView>
     </ThemeProvider>
+  );
+};
+
+export default function RootLayoutWithProviders() {
+  return (
+    <Providers>
+      <RootLayout />
+    </Providers>
   );
 }
