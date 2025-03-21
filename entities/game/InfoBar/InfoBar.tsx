@@ -1,13 +1,11 @@
-import { useSelector } from "react-redux";
 import { FC, useContext } from "react";
 import { InfoBarIcons } from "./InfoBarIcon";
-import { gameSelectors } from "@/store/game";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { IconSymbol } from "@/shared/components/ui/IconSymbol";
-import { indent, radius } from "@/lib/configs/ui/sizes";
 import { Level } from "@/type/game";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
+import { styles } from "./styles";
 
 export const InfoBar: FC = () => {
   // const levelInfo = useSelector(gameSelectors.getLevelInfo);
@@ -77,18 +75,3 @@ export const InfoBar: FC = () => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
-  },
-  iconsWrapper: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: indent.x1,
-    borderRadius: radius.medium,
-  },
-});

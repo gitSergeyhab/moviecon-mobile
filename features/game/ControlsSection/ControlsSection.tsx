@@ -1,28 +1,16 @@
 import { useContext, useState } from "react";
-import { useSelector } from "react-redux";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { fetchExitGame, fetchSkipQuestion } from "@/store/game/thunks";
-import { gameSelectors } from "@/store/game";
 import { ActivityIndicator, Text, View } from "react-native";
-import { Button } from "@/shared/components/Button/Button";
 import { IconButton } from "@/shared/components/Button/IconButton";
-import { Modal } from "@/shared/components/Modal/Modal";
 import { NexGameAction } from "@/type/game";
-import { indent, radius } from "@/lib/configs/ui/sizes";
-import { IconSymbol } from "@/shared/components/ui/IconSymbol";
-import { OutputColorRangeDict } from "@/type/ui";
 import ThemeContext from "@/lib/providers/ThemeProvider";
-import { colorTheme } from "@/lib/configs/ui/colorTheme";
-import { fontDict } from "@/lib/configs/ui/fonts";
-
-const outputColorRangeDictExit: OutputColorRangeDict = {
-  light: ["#d6cac8", "#da1305"],
-  dark: ["#aa1a00", "#da1305"],
-};
-const outputColorRangeDictNext: OutputColorRangeDict = {
-  light: ["#e79c10", "#f8e806"],
-  dark: ["#e79c10", "#f8e806"],
-};
+import { ControlsSectionModal } from "./ControlsSectionModal";
+import { styles } from "./styles";
+import {
+  outputColorRangeDictExit,
+  outputColorRangeDictNext,
+} from "./constants";
 
 export const ControlsSection = () => {
   // const options = useSelector(gameSelectors.getRemainingOptions);
@@ -59,22 +47,11 @@ export const ControlsSection = () => {
 
   const handleClickSkipBtn = () => dispatch(fetchSkipQuestion());
   const handleCloseModal = () => setIsModalShown(false);
-  const handleClickExitGameBtn = () =>
-    dispatch(fetchExitGame(handleCloseModal));
+  const exitGame = () => dispatch(fetchExitGame(handleCloseModal));
 
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        justifyContent: "space-between",
-        maxWidth: 300,
-        alignSelf: "center",
-        gap: 48,
-        marginTop: indent.x1,
-      }}
-    >
+    <View style={styles.container}>
       {isLoading && <ActivityIndicator size={24} color={"#000"} />}
-
       <IconButton
         name="meeting-room"
         size={28}
@@ -83,7 +60,6 @@ export const ControlsSection = () => {
         backgroundColor={theme === "dark" ? "#fff" : "#690c00"}
         paddingHorizontal={13}
       />
-
       <IconButton
         name="navigate-next"
         size={28}
@@ -93,36 +69,11 @@ export const ControlsSection = () => {
         backgroundColor={theme === "dark" ? "#fff" : "#666666"}
         paddingHorizontal={13}
       />
-      <Modal hideModal={handleCloseModal} isVisible={isModalShown}>
-        <View
-          style={{
-            backgroundColor: colorTheme[theme].background.secondary,
-            padding: 20,
-            borderRadius: radius.medium,
-            gap: indent.x2,
-            elevation: 16,
-          }}
-        >
-          <Text
-            style={{
-              textAlign: "center",
-              fontSize: fontDict.subtitle,
-              fontWeight: "700",
-              color: colorTheme[theme].text.primary,
-            }}
-          >
-            Вы уверены, что хотите завершить игру?
-          </Text>
-          <View
-            style={{
-              gap: indent.x2,
-            }}
-          >
-            <Button onPress={handleCloseModal}>Отмена</Button>
-            <Button onPress={handleClickExitGameBtn}>Завершить</Button>
-          </View>
-        </View>
-      </Modal>
+      <ControlsSectionModal
+        exitGame={exitGame}
+        hideModal={handleCloseModal}
+        isModalOpen={isModalShown}
+      />
     </View>
   );
 };

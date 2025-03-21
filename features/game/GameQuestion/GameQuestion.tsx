@@ -1,19 +1,15 @@
 import { FC, useState } from "react";
 import { QuestionBlocksByTestType } from "@/lib/configs/game/config";
 import { TestType, Variant } from "@/type/game";
-import { PrimaryTextBlock } from "@/shared/texts/PrimaryTextBlock";
-import { Dimensions, Image, Pressable, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { getContents } from "@/lib/utils/game";
-import { ControlsSection } from "@/entities/game/ControlsSection";
-import { testStyles } from "@/widgets/game/Game";
-import { fontDict } from "@/lib/configs/ui/fonts";
-import { indent } from "@/lib/configs/ui/sizes";
 import { GameQuestionWithTextAndImage } from "./GameQuestionWithTextAndImage";
 import { GameQuestionWithImage } from "./GameQuestionWithImage";
 import { GameQuestionWithText } from "./GameQuestionWithText";
-import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import { GameQuestionImageModal } from "./GameQuestionImageModal";
 import { GameQuestionWithSmallText } from "./GameQuestionWithSmallText";
+import { styles } from "./styles";
+import { gameUISettings } from "@/lib/configs/game/ui";
 
 export interface GameQuestionProps {
   variant: Variant;
@@ -39,25 +35,11 @@ export const GameQuestion: FC<GameQuestionProps> = ({
 
   const {
     question: { type },
-  } = testStyles[testType];
+  } = gameUISettings[testType];
 
   return (
-    <View
-      style={{
-        height: "auto",
-        marginTop: indent.x1,
-        gap: indent.x1,
-      }}
-    >
-      <Text
-        style={{
-          fontSize: fontDict.subtitle,
-          textAlign: "center",
-          color: colorTheme.dark.text.accent,
-        }}
-      >
-        {questionText}
-      </Text>
+    <View style={styles.container}>
+      <Text style={styles.mainText}>{questionText}</Text>
       {type === "all" && (
         <GameQuestionWithTextAndImage
           image={image as string}

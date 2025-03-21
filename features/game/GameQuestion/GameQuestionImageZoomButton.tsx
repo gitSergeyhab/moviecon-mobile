@@ -2,7 +2,7 @@ import { FC, useContext } from "react";
 import { View } from "react-native";
 import { IconButton } from "@/shared/components/Button/IconButton";
 import ThemeContext from "@/lib/providers/ThemeProvider";
-import { radius } from "@/lib/configs/ui/sizes";
+import { styles } from "./styles";
 // !!!!!!!!!!!!!!
 // const sizeDict: Record<
 //   SizeType,
@@ -15,7 +15,6 @@ import { radius } from "@/lib/configs/ui/sizes";
 
 export interface GameQuestionImageZoomButtonProps {
   onImagePress: VoidFunction;
-  // size?: SizeType;
 }
 export const GameQuestionImageZoomButton: FC<
   GameQuestionImageZoomButtonProps
@@ -23,33 +22,17 @@ export const GameQuestionImageZoomButton: FC<
   const { theme } = useContext(ThemeContext);
 
   return (
-    <>
-      <View
-        style={{
-          position: "absolute",
-          bottom: -60,
-          left: "50%",
-          width: 70,
-          height: 90,
+    <View
+      style={[
+        styles.zoomButtonContainer,
+        {
           backgroundColor: theme === "dark" ? "#000" : "#fff",
-          borderRadius: radius.circle,
-          opacity: 0.5,
-          justifyContent: "flex-start",
-          transform: [{ translateX: -35 }],
-          zIndex: 10,
-        }}
-      >
-        <View
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            padding: 0,
-            zIndex: 11,
-          }}
-        >
-          <IconButton name="zoom-in" size={32} onPress={onImagePress} />
-        </View>
+        },
+      ]}
+    >
+      <View style={styles.zoomButtonWrapper}>
+        <IconButton name="zoom-in" size={32} onPress={onImagePress} />
       </View>
-    </>
+    </View>
   );
 };

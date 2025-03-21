@@ -1,7 +1,7 @@
 import { ProgressBarItem } from "./ProgressBarItem";
 import { View } from "react-native";
 import { AnswerStatus } from "@/type/game";
-import { indent } from "@/lib/configs/ui/sizes";
+import { styles } from "./styles";
 
 export const ProgressBar = () => {
   // const statuses = useSelector(gameSelectors.getAnswerStatuses);
@@ -44,18 +44,7 @@ export const ProgressBar = () => {
   if (!statuses) return null;
 
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        height: 10,
-        width: "100%",
-        // backgroundColor: "red",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: indent.x1,
-        gap: 1,
-      }}
-    >
+    <View style={styles.container}>
       {statuses.map((item, i) => (
         <ProgressBarItem status={item} isCurrent={i === testIndex} key={i} />
       ))}

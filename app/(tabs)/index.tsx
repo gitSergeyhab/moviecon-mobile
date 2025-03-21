@@ -83,19 +83,13 @@
 //   },
 // });
 
-import { TopUserBlock } from "@/entities/TopUserBlok/TopUserBlock";
 import { ScreenWrapper } from "@/shared/components/ScreenWrapper/ScreenWrapper";
-import { Game } from "@/widgets/game/Game";
-import { useLocalSearchParams } from "expo-router";
-import { Text } from "react-native";
+import { Game } from "@/widgets/Game/Game";
 
 export default function GameScreen() {
-  const { id } = useLocalSearchParams();
   return (
-    <>
-      <ScreenWrapper>
-        <Game />
-      </ScreenWrapper>
-    </>
+    <ScreenWrapper>
+      <Game />
+    </ScreenWrapper>
   );
 }

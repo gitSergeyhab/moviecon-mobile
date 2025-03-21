@@ -1,9 +1,8 @@
 import { FC } from "react";
 import { TestType } from "@/type/game";
-
 import { Image, Pressable, ImageBackground } from "react-native";
 import { BlurView } from "expo-blur";
-import { testStyles } from "@/widgets/game/Game";
+import { gameUISettings } from "@/lib/configs/game/ui";
 
 export interface VariantImageBlockProps {
   testType: TestType;
@@ -16,8 +15,8 @@ export const VariantImageBlock: FC<VariantImageBlockProps> = ({
   onImagePress,
 }) => {
   const {
-    answer: { hasBgImage, hasTextBlock },
-  } = testStyles[testType];
+    answer: { hasBgImage },
+  } = gameUISettings[testType];
 
   if (!hasBgImage) {
     return (

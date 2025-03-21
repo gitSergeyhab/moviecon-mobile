@@ -1,7 +1,7 @@
-import { PrimaryTextBlock } from "@/shared/texts/PrimaryTextBlock";
 import { QuestionTextBlock } from "@/shared/texts/QuestionTextBlock";
 import { FC } from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
+import { styles } from "./styles";
 
 export interface GameQuestionWithTextProps {
   primary: string;
@@ -14,14 +14,7 @@ export const GameQuestionWithText: FC<GameQuestionWithTextProps> = ({
   secondary,
 }) => {
   return (
-    <View
-      style={{
-        width: "100%",
-        height: Dimensions.get("screen").height / 8,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View style={styles.questionWithTextContainer}>
       <QuestionTextBlock enText={enName} secondary={secondary} text={primary} />
     </View>
   );

@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { Dimensions, Image, Pressable, View } from "react-native";
+import { Image, Pressable, View } from "react-native";
 import { GameQuestionImageZoomButton } from "./GameQuestionImageZoomButton";
+import { styles } from "./styles";
 
 export interface GameQuestionWithImageProps {
   onImagePress: VoidFunction;
@@ -11,15 +12,10 @@ export const GameQuestionWithImage: FC<GameQuestionWithImageProps> = ({
   onImagePress,
 }) => {
   return (
-    <View
-      style={{
-        width: "100%",
-        height: Dimensions.get("screen").height / 5,
-      }}
-    >
+    <View style={styles.questionWithImageContainer}>
       <Pressable
         onPress={onImagePress}
-        style={{ flex: 1, width: "100%", overflow: "hidden" }}
+        style={styles.questionWithImagePressable}
       >
         <Image
           source={{ uri: image }}

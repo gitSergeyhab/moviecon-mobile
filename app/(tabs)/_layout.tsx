@@ -1,13 +1,10 @@
-import { Redirect, Tabs } from "expo-router";
+import { Redirect } from "expo-router";
 import { useSelector } from "react-redux";
 import React from "react";
-import { IconSymbol } from "@/shared/components/ui/IconSymbol";
 import { getUser, getUserStatus } from "@/store/user/selectors";
 import { TopUserBlock } from "@/entities/TopUserBlok/TopUserBlock";
 import { AppTabs } from "@/entities/tabs/AppTabs";
-import { create } from "react-test-renderer";
 import { createAppTab } from "@/entities/tabs/AppTab";
-// import { AppTab } from "@/entities/tabs/AppTab";
 
 export default function TabLayout() {
   const user = useSelector(getUser);
@@ -25,11 +22,6 @@ export default function TabLayout() {
     <>
       <TopUserBlock />
       <AppTabs>
-        {createAppTab({
-          iconName: "emoji-events",
-          name: "explore",
-          title: "Чемпионы",
-        })}
         {createAppTab({
           iconName: "sports-esports",
           name: "index",

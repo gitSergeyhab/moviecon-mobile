@@ -11,14 +11,11 @@ import { ThemeProvider } from "@/lib/providers/ThemeProvider";
 import { StatusBar } from "expo-status-bar";
 import { useSelector } from "react-redux";
 import { getUserStatus } from "@/store/user/selectors";
-// import { useColorScheme } from "@/hooks/useColorScheme.web";
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 store.dispatch(fetchUser());
 
 const RootLayout = () => {
-  // const colorScheme = useColorScheme();
   const requestUserStatus = useSelector(getUserStatus);
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),

@@ -1,27 +1,16 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { useSelector } from "react-redux";
 import { VariantBlocksByTestType } from "@/lib/configs/game/config";
 import { TestType, Variant } from "@/type/game";
 import { gameSelectors } from "@/store/game";
 import { getContents } from "@/lib/utils/game";
-import {
-  Dimensions,
-  Image,
-  Pressable,
-  Text,
-  View,
-  ImageBackground,
-} from "react-native";
-import { PrimaryTextBlock } from "@/shared/texts/PrimaryTextBlock";
-import { BlurView } from "expo-blur";
+import { Dimensions, View, StyleSheet } from "react-native";
 import { VariantImageBlock } from "./VariantImageBlock";
-import { testStyles } from "@/widgets/game/Game";
-import { Button } from "@/shared/components/Button/Button";
 import { indent, radius } from "@/lib/configs/ui/sizes";
-import { cutString } from "@/lib/utils/string";
-import { fontDict } from "@/lib/configs/ui/fonts";
-import { IconButton } from "@/shared/components/Button/IconButton";
-import ThemeContext from "@/lib/providers/ThemeProvider";
+import { gameUISettings } from "@/lib/configs/game/ui";
+import { ZoomButton } from "./ZoomButton";
+import { CheckIconButton } from "./CheckIconButton";
+import { CheckButton } from "./CheckButton";
 
 export interface GameQuestionProps {
   variant: Variant;
@@ -39,7 +28,6 @@ export const GameVariant: FC<GameQuestionProps> = ({
   onImagePress,
   onButtonPress,
 }) => {
-  const { theme } = useContext(ThemeContext);
   const isAnswerDone = useSelector(gameSelectors.getIsAnswerDone);
   const loadingStatus = useSelector(gameSelectors.getLoadingStatus);
   const { enName, image, primary, secondary } = getContents(
@@ -49,25 +37,22 @@ export const GameVariant: FC<GameQuestionProps> = ({
   );
 
   const {
-    answer: { hasTextBlock, hasImage, height, hasBgImage },
-  } = testStyles[testType];
+    answer: { hasTextBlock, hasImage, grid, hasBgImage },
+  } = gameUISettings[testType];
 
   return (
     <View
-      style={{
-        alignItems: "center",
-        justifyContent: "center",
-        height: testStyles[testType].answer.grid === "4*1" ? "24%" : "48%",
-        width:
-          testStyles[testType].answer.grid === "4*1"
-            ? "100%"
-            : Dimensions.get("screen").width / 2 - indent.x3,
-        borderWidth: 1,
-        borderRadius: radius.small,
-        padding: hasBgImage ? 0 : indent.x1,
-        gap: indent.x1,
-        overflow: "hidden",
-      }}
+      style={[
+        styles.container,
+        {
+          height: grid === "4*1" ? "24%" : "48%",
+          width:
+            grid === "4*1"
+              ? "100%"
+              : Dimensions.get("screen").width / 2 - indent.x3,
+          padding: hasBgImage ? 0 : indent.x1,
+        },
+      ]}
     >
       {Boolean(image) && (
         <VariantImageBlock
@@ -78,77 +63,27 @@ export const GameVariant: FC<GameQuestionProps> = ({
       )}
 
       {hasTextBlock && (
-        <View style={{ width: "100%" }}>
-          <Button variant="secondary" size="small" onPress={onButtonPress}>
-            {hasImage ? (
-              cutString(primary as string, 32)
-            ) : (
-              <PrimaryTextBlock
-                text={primary}
-                enText={enName}
-                secondary={secondary}
-              />
-            )}
-          </Button>
-        </View>
+        <CheckButton
+          enName={enName}
+          primary={primary}
+          secondary={secondary}
+          hasImage={Boolean(image)}
+          onButtonPress={onButtonPress}
+        />
       )}
-      {hasImage && (
-        <>
-          <View
-            style={{
-              position: "absolute",
-              top: -40,
-              left: -40,
-              width: 100,
-              height: 100,
-              backgroundColor: theme === "dark" ? "#000" : "#fff",
-              borderRadius: radius.circle,
-              opacity: 0.5,
-            }}
-          />
-          <View
-            style={{
-              position: "absolute",
-              top: 1,
-              left: 1,
-              justifyContent: "center",
-              alignItems: "center",
-              padding: 0,
-            }}
-          >
-            <IconButton name="zoom-in" size={45} onPress={onImagePress} />
-          </View>
-        </>
-      )}
-
-      {!hasTextBlock && (
-        <>
-          <View
-            style={{
-              position: "absolute",
-              bottom: -55,
-              right: -55,
-              width: 150,
-              height: 150,
-              backgroundColor: theme === "dark" ? "#000" : "#fff",
-              borderRadius: radius.circle,
-              opacity: 0.5,
-            }}
-          />
-          <View
-            style={{
-              position: "absolute",
-              bottom: 10,
-              right: 10,
-              justifyContent: "center",
-              alignItems: "center",
-              padding: 0,
-            }}
-          >
-            <IconButton name="check-circle" size={60} onPress={onButtonPress} />
-          </View>
-        </>
-      )}
+      {hasImage && <ZoomButton onImagePress={onImagePress} />}
+      {!hasTextBlock && <CheckIconButton onButtonPress={onButtonPress} />}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderRadius: radius.small,
+    gap: indent.x1,
+    overflow: "hidden",
+  },
+});

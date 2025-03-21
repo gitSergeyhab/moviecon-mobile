@@ -1,7 +1,8 @@
 import { cutString } from "@/lib/utils/string";
 import { QuestionTextBlock } from "@/shared/texts/QuestionTextBlock";
 import { FC } from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
+import { styles } from "./styles";
 
 export interface GameQuestionWithSmallTextProps {
   primary: string;
@@ -12,14 +13,7 @@ export const GameQuestionWithSmallText: FC<GameQuestionWithSmallTextProps> = ({
   secondary,
 }) => {
   return (
-    <View
-      style={{
-        width: "100%",
-        height: Dimensions.get("screen").height / 16,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View style={styles.questionWithSmallTextContainer}>
       <QuestionTextBlock secondary={secondary} text={cutString(primary, 36)} />
     </View>
   );
