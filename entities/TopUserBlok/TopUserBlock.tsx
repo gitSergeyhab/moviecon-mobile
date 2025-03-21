@@ -1,8 +1,9 @@
 import { useLogout } from "@/hooks/useLogout";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
+import { fontDict } from "@/lib/configs/ui/fonts";
 import ThemeContext from "@/lib/providers/ThemeProvider";
+import { cutString } from "@/lib/utils/string";
 import { IconButton } from "@/shared/components/Button/IconButton";
-import { IconSymbol } from "@/shared/components/ui/IconSymbol";
 import { userSelectors } from "@/store/user";
 import { useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
@@ -20,17 +21,15 @@ export const TopUserBlock = () => {
         backgroundColor: colorTheme[theme].background.secondary,
       }}
     >
-      <View style={styles.left}>
-        <IconSymbol size={28} name="supervised-user-circle" color={"#59d109"} />
-        <Text>{user?.name || "no user"}</Text>
-        <Text>{theme || "no theme"}</Text>
-        <IconButton
-          onPress={toggleTheme}
-          size={28}
-          name={theme === "light" ? "dark-mode" : "light-mode"}
-        />
-      </View>
       <IconButton onPress={logout} size={24} name="logout" />
+      <Text style={{ ...styles.user, color: colorTheme[theme].text.accent }}>
+        {cutString(user?.name || "")}
+      </Text>
+      <IconButton
+        onPress={toggleTheme}
+        size={28}
+        name={theme === "light" ? "dark-mode" : "light-mode"}
+      />
     </View>
   );
 };
@@ -45,9 +44,8 @@ const styles = StyleSheet.create({
     height: 48,
     paddingHorizontal: 12,
   },
-  left: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 16,
+  user: {
+    fontWeight: "bold",
+    fontSize: fontDict.default,
   },
 });

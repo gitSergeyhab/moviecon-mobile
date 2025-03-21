@@ -1,0 +1,1656 @@
+[
+  {
+    "_id": "668409b05560ddc21a8fceef",
+    "questionText": "Угадайте фильм по слогану",
+    "question": {
+      "_id": "65282ef9c23dc783b0e5d21f",
+      "slogan": "Что если одна таблетка NZT сделает тебя богатым и могущественным? Узнай о побочных эффектах"
+    },
+    "variants": [
+      {
+        "id": 805650,
+        "enName": null,
+        "name": "Чудо на Гудзоне",
+        "year": 2016,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_805650.jpg",
+        "_id": "65282ef9c23dc783b0e5d220"
+      },
+      {
+        "id": 462606,
+        "enName": "The Dark Fields",
+        "name": "Области тьмы",
+        "year": 2011,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_462606.jpg",
+        "_id": "65282ef9c23dc783b0e5d221"
+      },
+      {
+        "id": 840372,
+        "enName": null,
+        "name": "Шазам!",
+        "year": 2019,
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/0577a0bb-adc5-4cd6-99d1-9294aee01106/x1000",
+        "_id": "65282ef9c23dc783b0e5d222"
+      },
+      {
+        "id": 47018,
+        "enName": "The Woods",
+        "name": "Таинственный лес",
+        "year": 2004,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_47018.jpg",
+        "_id": "65282ef9c23dc783b0e5d223"
+      }
+    ],
+    "answer": 462606,
+    "category": "world",
+    "testType": "MovieBySlogan",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.612Z",
+    "updatedAt": "2023-10-12T17:38:02.612Z"
+  },
+  {
+    "_id": "66840c4c6d3063a08379fda6",
+    "questionText": "В каком году был снят фильм / первый сезон сериала",
+    "question": {
+      "name": "Пи",
+      "imageUrl": "https://st.kp.yandex.net/images/film_big/8486.jpg",
+      "_id": "65282ef9c23dc783b0e5d0d5",
+      "id": 8486,
+      "enName": null
+    },
+    "variants": [
+      {
+        "id": 1993,
+        "year": 1993,
+        "_id": "65282ef9c23dc783b0e5d0d6"
+      },
+      {
+        "id": 2000,
+        "year": 2000,
+        "_id": "65282ef9c23dc783b0e5d0d7"
+      },
+      {
+        "id": 1997,
+        "year": 1997,
+        "_id": "65282ef9c23dc783b0e5d0d8"
+      },
+      {
+        "id": 1995,
+        "year": 1995,
+        "_id": "65282ef9c23dc783b0e5d0d9"
+      }
+    ],
+    "answer": 1997,
+    "category": "world",
+    "testType": "YearByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.609Z",
+    "updatedAt": "2023-10-12T17:38:02.609Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd209",
+    "questionText": "Кто на фото",
+    "question": {
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_22879.jpg",
+      "_id": "65282efac23dc783b0e5e8b7"
+    },
+    "variants": [
+      {
+        "id": 1638,
+        "name": "Лас Алонсо",
+        "_id": "65282efac23dc783b0e5e8b8"
+      },
+      {
+        "id": 22879,
+        "name": "Джеймс Франко",
+        "_id": "65282efac23dc783b0e5e8b9"
+      },
+      {
+        "id": 6266,
+        "name": "Майкл Рукер",
+        "_id": "65282efac23dc783b0e5e8ba"
+      },
+      {
+        "id": 10315,
+        "name": "Бен Мендельсон",
+        "_id": "65282efac23dc783b0e5e8bb"
+      }
+    ],
+    "answer": 22879,
+    "category": "world",
+    "testType": "PersonByPhoto",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.663Z",
+    "updatedAt": "2023-10-12T17:38:02.663Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a0138",
+    "questionText": "на каком фото изображен",
+    "question": {
+      "name": "Арми Хаммер",
+      "_id": "65282efac23dc783b0e5eb99"
+    },
+    "variants": [
+      {
+        "id": 1121926,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1121926.jpg",
+        "_id": "65282efac23dc783b0e5eb9a"
+      },
+      {
+        "id": 31399,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_31399.jpg",
+        "_id": "65282efac23dc783b0e5eb9b"
+      },
+      {
+        "id": 466506,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_466506.jpg",
+        "_id": "65282efac23dc783b0e5eb9c"
+      },
+      {
+        "id": 25491,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_25491.jpg",
+        "_id": "65282efac23dc783b0e5eb9d"
+      }
+    ],
+    "answer": 1121926,
+    "category": "world",
+    "testType": "PhotoByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.668Z",
+    "updatedAt": "2023-10-12T17:38:02.668Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fb8b7",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Лиам Нисон",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6534.jpg",
+      "_id": "65282ef9c23dc783b0e5c325"
+    },
+    "variants": [
+      {
+        "id": 378,
+        "enName": null,
+        "name": "Крадущийся тигр, затаившийся дракон",
+        "year": 2000,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/378.jpg",
+        "_id": "65282ef9c23dc783b0e5c326"
+      },
+      {
+        "id": 279850,
+        "enName": "Marley and Me",
+        "name": "Марли и я",
+        "year": 2008,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/279850.jpg",
+        "_id": "65282ef9c23dc783b0e5c327"
+      },
+      {
+        "id": 1209193,
+        "enName": null,
+        "name": "El Camino: Во все тяжкие",
+        "year": 2019,
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/6bbc44be-6d36-4037-a9c8-889b65f4550b/orig",
+        "_id": "65282ef9c23dc783b0e5c328"
+      },
+      {
+        "id": 712639,
+        "enName": null,
+        "name": "Заложница 3",
+        "year": 2014,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/712639.jpg",
+        "_id": "65282ef9c23dc783b0e5c329"
+      }
+    ],
+    "answer": 712639,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.571Z",
+    "updatedAt": "2023-10-12T17:38:02.571Z"
+  },
+  {
+    "_id": "65282efac23dc783b0e5ea8a",
+    "questionText": "на каком фото изображен",
+    "question": {
+      "name": "Том Хиддлстон",
+      "_id": "65282efac23dc783b0e5ea8b"
+    },
+    "variants": [
+      {
+        "id": 6751,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6751.jpg",
+        "_id": "65282efac23dc783b0e5ea8c"
+      },
+      {
+        "id": 8470,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8470.jpg",
+        "_id": "65282efac23dc783b0e5ea8d"
+      },
+      {
+        "id": 553143,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_553143.jpg",
+        "_id": "65282efac23dc783b0e5ea8e"
+      },
+      {
+        "id": 49627,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_49627.jpg",
+        "_id": "65282efac23dc783b0e5ea8f"
+      }
+    ],
+    "answer": 553143,
+    "category": "world",
+    "testType": "PhotoByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.666Z",
+    "updatedAt": "2023-10-12T17:38:02.666Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a0111",
+    "questionText": "Кто на фото",
+    "question": {
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6317.jpg",
+      "_id": "65282efac23dc783b0e5e773"
+    },
+    "variants": [
+      {
+        "id": 14363,
+        "name": "Пол Беттани",
+        "_id": "65282efac23dc783b0e5e774"
+      },
+      {
+        "id": 6317,
+        "name": "Пол Уокер",
+        "_id": "65282efac23dc783b0e5e775"
+      },
+      {
+        "id": 29366,
+        "name": "Рик Юн",
+        "_id": "65282efac23dc783b0e5e776"
+      },
+      {
+        "id": 10780,
+        "name": "Доминик Уэст",
+        "_id": "65282efac23dc783b0e5e777"
+      }
+    ],
+    "answer": 6317,
+    "category": "world",
+    "testType": "PersonByPhoto",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.660Z",
+    "updatedAt": "2023-10-12T17:38:02.660Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd4d9",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "РЭД 2",
+      "_id": "65282efac23dc783b0e5f289",
+      "year": 2013,
+      "enName": "RED 2: Retired, Extremely Dangerous"
+    },
+    "variants": [
+      {
+        "id": "632f123f6e8e3255d69119d8",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/9634ef96-f7c1-424d-9e7a-53e1953ee9df/orig",
+        "_id": "65282efac23dc783b0e5f28a"
+      },
+      {
+        "id": "632e60f3aff710671bab5869",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/d896f4ab-a83b-434e-b035-fbdf4162fe5a/orig",
+        "_id": "65282efac23dc783b0e5f28b"
+      },
+      {
+        "id": "632e5edaaff710671ba97aba",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/53dae77e-ebbd-4426-badd-d25df54ce29c/orig",
+        "_id": "65282efac23dc783b0e5f28c"
+      },
+      {
+        "id": "632f13e96e8e3255d69d3118",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/73373070-0aa7-46a8-9ca3-0890ed265e6d/orig",
+        "_id": "65282efac23dc783b0e5f28d"
+      }
+    ],
+    "answer": "632e60f3aff710671bab5869",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.684Z",
+    "updatedAt": "2023-10-12T17:38:02.684Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fcdff",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Дэн Эйкройд",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7727.jpg",
+      "_id": "65282ef9c23dc783b0e5c4b1"
+    },
+    "variants": [
+      {
+        "id": 1043955,
+        "enName": null,
+        "name": "Крид 2",
+        "year": 2018,
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/49dfd28e-da36-4327-b924-35e93b815c9c/orig",
+        "_id": "65282ef9c23dc783b0e5c4b2"
+      },
+      {
+        "id": 582359,
+        "enName": "P.O.I",
+        "name": "В поле зрения",
+        "year": 2011,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/582359.jpg",
+        "_id": "65282ef9c23dc783b0e5c4b3"
+      },
+      {
+        "id": 5285,
+        "enName": null,
+        "name": "Поменяться местами",
+        "year": 1983,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/5285.jpg",
+        "_id": "65282ef9c23dc783b0e5c4b4"
+      },
+      {
+        "id": 308625,
+        "enName": null,
+        "name": "Сплетница",
+        "year": 2007,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/308625.jpg",
+        "_id": "65282ef9c23dc783b0e5c4b5"
+      }
+    ],
+    "answer": 5285,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.575Z",
+    "updatedAt": "2023-10-12T17:38:02.575Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a00b7",
+    "questionText": "Кто на фото",
+    "question": {
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10853.jpg",
+      "_id": "65282efac23dc783b0e5e2f9"
+    },
+    "variants": [
+      {
+        "id": 21496,
+        "name": "Сэм Рокуэлл",
+        "_id": "65282efac23dc783b0e5e2fa"
+      },
+      {
+        "id": 1147414,
+        "name": "Кристофер Минц-Плассе",
+        "_id": "65282efac23dc783b0e5e2fb"
+      },
+      {
+        "id": 8733,
+        "name": "Гэбриел Бирн",
+        "_id": "65282efac23dc783b0e5e2fc"
+      },
+      {
+        "id": 10853,
+        "name": "Кэтрин Хайгл",
+        "_id": "65282efac23dc783b0e5e2fd"
+      }
+    ],
+    "answer": 10853,
+    "category": "world",
+    "testType": "PersonByPhoto",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.651Z",
+    "updatedAt": "2023-10-12T17:38:02.651Z"
+  },
+  {
+    "_id": "65282ef9c23dc783b0e5cc06",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Пенелопа Крус",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_12227.jpg",
+      "_id": "65282ef9c23dc783b0e5cc07"
+    },
+    "variants": [
+      {
+        "id": 455,
+        "enName": null,
+        "name": "Молодой Франкенштейн",
+        "year": 1974,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/455.jpg",
+        "_id": "65282ef9c23dc783b0e5cc08"
+      },
+      {
+        "id": 870,
+        "enName": null,
+        "name": "Ванильное небо",
+        "year": 2001,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/870.jpg",
+        "_id": "65282ef9c23dc783b0e5cc09"
+      },
+      {
+        "id": 277548,
+        "enName": null,
+        "name": "Красавцы",
+        "year": 2004,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/277548.jpg",
+        "_id": "65282ef9c23dc783b0e5cc0a"
+      },
+      {
+        "id": 395,
+        "enName": "The Sixth Sense (1999)",
+        "name": "Шестое чувство",
+        "year": 1999,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/395.jpg",
+        "_id": "65282ef9c23dc783b0e5cc0b"
+      }
+    ],
+    "answer": 870,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.595Z",
+    "updatedAt": "2023-10-12T17:38:02.595Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fce51",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Коул Спроус",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_252.jpg",
+      "_id": "65282ef9c23dc783b0e5c7cf"
+    },
+    "variants": [
+      {
+        "id": 102136,
+        "enName": "Death Race 3000",
+        "name": "Смертельная гонка",
+        "year": 2008,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/102136.jpg",
+        "_id": "65282ef9c23dc783b0e5c7d0"
+      },
+      {
+        "id": 651,
+        "enName": "007։ Die Another Day",
+        "name": "Умри, но не сейчас",
+        "year": 2002,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/651.jpg",
+        "_id": "65282ef9c23dc783b0e5c7d1"
+      },
+      {
+        "id": 498,
+        "enName": "The Body",
+        "name": "Останься со мной",
+        "year": 1986,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/498.jpg",
+        "_id": "65282ef9c23dc783b0e5c7d2"
+      },
+      {
+        "id": 962012,
+        "enName": "Rivervale",
+        "name": "Ривердэйл",
+        "year": 2017,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/962012.jpg",
+        "_id": "65282ef9c23dc783b0e5c7d3"
+      }
+    ],
+    "answer": 962012,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.583Z",
+    "updatedAt": "2023-10-12T17:38:02.583Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a0523",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "Ворон",
+      "_id": "65282efac23dc783b0e5f9f7",
+      "year": 1994,
+      "enName": "The Crow I"
+    },
+    "variants": [
+      {
+        "id": "632e60faaff710671bab5eba",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/f96ab57f-d85b-4f4b-81a0-91ad814bcd4a/orig",
+        "_id": "65282efac23dc783b0e5f9f8"
+      },
+      {
+        "id": "632e6166aff710671babbb08",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/b0a10c35-687c-44f3-ac26-430d5c6dbf37/orig",
+        "_id": "65282efac23dc783b0e5f9f9"
+      },
+      {
+        "id": "632e5f22aff710671ba9bc3a",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/6fc021e6-28cf-44e5-9a6a-ddb896a09df6/orig",
+        "_id": "65282efac23dc783b0e5f9fa"
+      },
+      {
+        "id": "632e5dd1aff710671ba87b63",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/0dbce68b-b5f1-46e8-ad0c-6212acecfb6f/orig",
+        "_id": "65282efac23dc783b0e5f9fb"
+      }
+    ],
+    "answer": "632e6166aff710671babbb08",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.697Z",
+    "updatedAt": "2023-10-12T17:38:02.697Z"
+  },
+  {
+    "_id": "65282efac23dc783b0e5ed72",
+    "questionText": "на каком фото изображен",
+    "question": {
+      "name": "Фрэнсис Макдорманд",
+      "_id": "65282efac23dc783b0e5ed73"
+    },
+    "variants": [
+      {
+        "id": 7639,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7639.jpg",
+        "_id": "65282efac23dc783b0e5ed74"
+      },
+      {
+        "id": 7988,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7988.jpg",
+        "_id": "65282efac23dc783b0e5ed75"
+      },
+      {
+        "id": 4950097,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4950097.jpg",
+        "_id": "65282efac23dc783b0e5ed76"
+      },
+      {
+        "id": 7222,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7222.jpg",
+        "_id": "65282efac23dc783b0e5ed77"
+      }
+    ],
+    "answer": 7222,
+    "category": "world",
+    "testType": "PhotoByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.672Z",
+    "updatedAt": "2023-10-12T17:38:02.672Z"
+  },
+  {
+    "_id": "65282efac23dc783b0e60344",
+    "questionText": "Угадайте фильм по кадру",
+    "question": {
+      "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/95a84487-9d37-44db-afc8-1ee936f08325/orig",
+      "_id": "65282efac23dc783b0e60345"
+    },
+    "variants": [
+      {
+        "id": 1122138,
+        "enName": null,
+        "name": "Мы",
+        "year": 2019,
+        "_id": "65282efac23dc783b0e60346"
+      },
+      {
+        "id": 548,
+        "enName": null,
+        "name": "Проклятый путь",
+        "year": 2002,
+        "_id": "65282efac23dc783b0e60347"
+      },
+      {
+        "id": 280932,
+        "enName": null,
+        "name": "Дорога перемен",
+        "year": 2008,
+        "_id": "65282efac23dc783b0e60348"
+      },
+      {
+        "id": 1282688,
+        "enName": null,
+        "name": "Тор: Любовь и гром",
+        "year": 2022,
+        "_id": "65282efac23dc783b0e60349"
+      }
+    ],
+    "answer": 1282688,
+    "category": "world",
+    "testType": "MovieByFrame",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.717Z",
+    "updatedAt": "2023-10-12T17:38:02.717Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fb98a",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Юэн Бремнер",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_31970.jpg",
+      "_id": "65282ef9c23dc783b0e5cc55"
+    },
+    "variants": [
+      {
+        "id": 515,
+        "enName": null,
+        "name": "На игле",
+        "year": 1995,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/515.jpg",
+        "_id": "65282ef9c23dc783b0e5cc56"
+      },
+      {
+        "id": 7410,
+        "enName": "Robocop: The Future of Law Enforcement",
+        "name": "Робокоп",
+        "year": 1987,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/7410.jpg",
+        "_id": "65282ef9c23dc783b0e5cc57"
+      },
+      {
+        "id": 2918,
+        "enName": "Evil Dead 2",
+        "name": "Зловещие мертвецы 2",
+        "year": 1987,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/2918.jpg",
+        "_id": "65282ef9c23dc783b0e5cc58"
+      },
+      {
+        "id": 11130,
+        "enName": "Ten Things I Hate About You",
+        "name": "10 причин моей ненависти",
+        "year": 1999,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/11130.jpg",
+        "_id": "65282ef9c23dc783b0e5cc59"
+      }
+    ],
+    "answer": 515,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.595Z",
+    "updatedAt": "2023-10-12T17:38:02.595Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd024",
+    "questionText": "Кто снимался в этом фильме",
+    "question": {
+      "name": "Гарри Поттер и Дары Смерти: Часть I",
+      "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_276762.jpg",
+      "_id": "65282efac23dc783b0e5d8a3",
+      "year": 2010,
+      "enName": "Harry Potter and the Deathly Hallows - Part 1"
+    },
+    "variants": [
+      {
+        "id": 26071,
+        "name": "Том Фелтон",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_26071.jpg",
+        "_id": "65282efac23dc783b0e5d8a4"
+      },
+      {
+        "id": 242662,
+        "name": "Тайка Вайтити",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_242662.jpg",
+        "_id": "65282efac23dc783b0e5d8a5"
+      },
+      {
+        "id": 1509087,
+        "name": "Риз Дэрби",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1509087.jpg",
+        "_id": "65282efac23dc783b0e5d8a6"
+      },
+      {
+        "id": 38905,
+        "name": "Джон Хэмм",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_38905.jpg",
+        "_id": "65282efac23dc783b0e5d8a7"
+      }
+    ],
+    "answer": 26071,
+    "category": "world",
+    "testType": "PersonByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.626Z",
+    "updatedAt": "2023-10-12T17:38:02.626Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fbe96",
+    "questionText": "Кто на фото",
+    "question": {
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1171284.jpg",
+      "_id": "65282efac23dc783b0e5e455"
+    },
+    "variants": [
+      {
+        "id": 1830611,
+        "name": "Эмилия Кларк",
+        "_id": "65282efac23dc783b0e5e456"
+      },
+      {
+        "id": 24369,
+        "name": "Барбара Херши",
+        "_id": "65282efac23dc783b0e5e457"
+      },
+      {
+        "id": 1171284,
+        "name": "Дэйв Батиста",
+        "_id": "65282efac23dc783b0e5e458"
+      },
+      {
+        "id": 7371,
+        "name": "Форест Уитакер",
+        "_id": "65282efac23dc783b0e5e459"
+      }
+    ],
+    "answer": 1171284,
+    "category": "world",
+    "testType": "PersonByPhoto",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.654Z",
+    "updatedAt": "2023-10-12T17:38:02.654Z"
+  },
+  {
+    "_id": "65282efac23dc783b0e5f270",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "enName": null,
+      "name": "Траффик",
+      "year": 2000,
+      "_id": "65282efac23dc783b0e5f271"
+    },
+    "variants": [
+      {
+        "id": "632e5f53aff710671ba9e866",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/8cdb0910-24fe-4597-bcf7-648da28a3f28/orig",
+        "_id": "65282efac23dc783b0e5f272"
+      },
+      {
+        "id": "632e5ee0aff710671ba9806f",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/c4024644-b878-4783-a548-a2fb85d46bf2/orig",
+        "_id": "65282efac23dc783b0e5f273"
+      },
+      {
+        "id": "632e612eaff710671bab8bbc",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/44b3fd22-9429-42ff-926b-d9383aa25870/orig",
+        "_id": "65282efac23dc783b0e5f274"
+      },
+      {
+        "id": "632f153c6e8e3255d6a6731b",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/0daccc3d-e38b-4845-902c-3970d9e7fbc0/orig",
+        "_id": "65282efac23dc783b0e5f275"
+      }
+    ],
+    "answer": "632f153c6e8e3255d6a6731b",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.684Z",
+    "updatedAt": "2023-10-12T17:38:02.684Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd84c",
+    "questionText": "Угадайте фильм по кадру",
+    "question": {
+      "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/576837ef-d0c6-465c-bc04-7746178e3972/orig",
+      "_id": "65282efac23dc783b0e606c3"
+    },
+    "variants": [
+      {
+        "id": 278185,
+        "enName": "Darjeeling Limited",
+        "name": "Поезд на Дарджилинг. Отчаянные путешественники",
+        "year": 2007,
+        "_id": "65282efac23dc783b0e606c4"
+      },
+      {
+        "id": 762500,
+        "enName": null,
+        "name": "Красный воробей",
+        "year": 2018,
+        "_id": "65282efac23dc783b0e606c5"
+      },
+      {
+        "id": 395978,
+        "enName": "Fast and Furious 4",
+        "name": "Форсаж 4",
+        "year": 2009,
+        "_id": "65282efac23dc783b0e606c6"
+      },
+      {
+        "id": 153013,
+        "enName": "BSG",
+        "name": "Звездный крейсер Галактика",
+        "year": 2004,
+        "_id": "65282efac23dc783b0e606c7"
+      }
+    ],
+    "answer": 153013,
+    "category": "world",
+    "testType": "MovieByFrame",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.728Z",
+    "updatedAt": "2023-10-12T17:38:02.728Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a0684",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "Дюнкерк",
+      "_id": "65282efac23dc783b0e5fd51",
+      "year": 2017,
+      "enName": null
+    },
+    "variants": [
+      {
+        "id": "632e5e5caff710671ba904ab",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/8e09ebc6-a55a-4720-99ee-24939aecaafd/orig",
+        "_id": "65282efac23dc783b0e5fd52"
+      },
+      {
+        "id": "632e60d5aff710671bab3eeb",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/ab4bf1b6-a577-48d7-9b48-788f27886c30/orig",
+        "_id": "65282efac23dc783b0e5fd53"
+      },
+      {
+        "id": "632e5f57aff710671ba9ece1",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/9cac904d-e142-4ce3-99e9-9ad967b175cf/orig",
+        "_id": "65282efac23dc783b0e5fd54"
+      },
+      {
+        "id": "632e5e5eaff710671ba906eb",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/ac2398fe-437c-4220-a7a7-f2987ef2412b/orig",
+        "_id": "65282efac23dc783b0e5fd55"
+      }
+    ],
+    "answer": "632e5f57aff710671ba9ece1",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.703Z",
+    "updatedAt": "2023-10-12T17:38:02.703Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fcd33",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Кодзи Якусё",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_287225.jpg",
+      "_id": "65282ef9c23dc783b0e5c84d"
+    },
+    "variants": [
+      {
+        "id": 797840,
+        "enName": "Fantastic Beasts and Where to Find Them 3D",
+        "name": "Фантастические твари и где они обитают",
+        "year": 2016,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/797840.jpg",
+        "_id": "65282ef9c23dc783b0e5c84e"
+      },
+      {
+        "id": 102125,
+        "enName": null,
+        "name": "Вавилон",
+        "year": 2006,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/102125.jpg",
+        "_id": "65282ef9c23dc783b0e5c84f"
+      },
+      {
+        "id": 817324,
+        "enName": "Sicario 1",
+        "name": "Убийца",
+        "year": 2015,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/817324.jpg",
+        "_id": "65282ef9c23dc783b0e5c850"
+      },
+      {
+        "id": 1262931,
+        "enName": null,
+        "name": "Власть пса",
+        "year": 2021,
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/20e863c3-bcc9-4511-a918-b3e33635599c/orig",
+        "_id": "65282ef9c23dc783b0e5c851"
+      }
+    ],
+    "answer": 102125,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.585Z",
+    "updatedAt": "2023-10-12T17:38:02.585Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fce9c",
+    "questionText": "Какой фильм / первый сезон какого сериала снят в этом году",
+    "question": {
+      "_id": "65282ef9c23dc783b0e5ce05",
+      "year": 2013
+    },
+    "variants": [
+      {
+        "id": 902939,
+        "enName": null,
+        "name": "Малыш на драйве",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_902939.jpg",
+        "_id": "65282ef9c23dc783b0e5ce06"
+      },
+      {
+        "id": 859908,
+        "enName": null,
+        "name": "Мистер Робот",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_859908.jpg",
+        "_id": "65282ef9c23dc783b0e5ce07"
+      },
+      {
+        "id": 722886,
+        "enName": null,
+        "name": "Миллион способов потерять голову",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_722886.jpg",
+        "_id": "65282ef9c23dc783b0e5ce08"
+      },
+      {
+        "id": 463686,
+        "enName": "The Tomb",
+        "name": "План побега",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_463686.jpg",
+        "_id": "65282ef9c23dc783b0e5ce09"
+      }
+    ],
+    "answer": 463686,
+    "category": "world",
+    "testType": "MovieByYear",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.602Z",
+    "updatedAt": "2023-10-12T17:38:02.602Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fc20b",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "Сияние",
+      "_id": "65282efac23dc783b0e5fa45",
+      "year": 1980,
+      "enName": "Stanley Kubrick's The Shining"
+    },
+    "variants": [
+      {
+        "id": "632e5dd0aff710671ba87a2d",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/c648b5ea-fada-4c80-9e82-c94d516b9e76/orig",
+        "_id": "65282efac23dc783b0e5fa46"
+      },
+      {
+        "id": "632e5ec4aff710671ba966c3",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/8de51787-7401-4a6f-b06f-bb8e9b6a141d/orig",
+        "_id": "65282efac23dc783b0e5fa47"
+      },
+      {
+        "id": "632e60d0aff710671bab3a09",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/f329574b-01d4-4074-99bb-17fc9a22b5cf/orig",
+        "_id": "65282efac23dc783b0e5fa48"
+      },
+      {
+        "id": "632e5bc6b64b1e45ea942869",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/720cd1e5-f7c6-4d51-b972-ba9d452c13ea/orig",
+        "_id": "65282efac23dc783b0e5fa49"
+      }
+    ],
+    "answer": "632e5ec4aff710671ba966c3",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.698Z",
+    "updatedAt": "2023-10-12T17:38:02.698Z"
+  },
+  {
+    "_id": "65282ef9c23dc783b0e5d3d4",
+    "questionText": "У какого из перечисленных фильмов самый большой бюджет ",
+    "question": {
+      "_id": "65282ef9c23dc783b0e5d3d5"
+    },
+    "variants": [
+      {
+        "id": 61361,
+        "enName": "X-Men 3",
+        "name": "Люди Икс: Последняя битва",
+        "year": 2006,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_61361.jpg",
+        "_id": "65282ef9c23dc783b0e5d3d6"
+      },
+      {
+        "id": 786958,
+        "enName": "Now You See Me: The Second Act",
+        "name": "Иллюзия обмана 2",
+        "year": 2016,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_786958.jpg",
+        "_id": "65282ef9c23dc783b0e5d3d7"
+      },
+      {
+        "id": 424266,
+        "enName": null,
+        "name": "Книга Илая",
+        "year": 2009,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_424266.jpg",
+        "_id": "65282ef9c23dc783b0e5d3d8"
+      },
+      {
+        "id": 581937,
+        "enName": "House of Cards",
+        "name": "Карточный домик",
+        "year": 2013,
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_581937.jpg",
+        "_id": "65282ef9c23dc783b0e5d3d9"
+      }
+    ],
+    "answer": 61361,
+    "category": "world",
+    "testType": "MovieByBudget",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.615Z",
+    "updatedAt": "2023-10-12T17:38:02.615Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd5a0",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "Петля времени",
+      "_id": "65282efac23dc783b0e5fadb",
+      "year": 2012,
+      "enName": null
+    },
+    "variants": [
+      {
+        "id": "632e5edcaff710671ba97d1c",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/ab846a6a-33af-45c2-8db5-dac5217bc903/orig",
+        "_id": "65282efac23dc783b0e5fadc"
+      },
+      {
+        "id": "6330021d15eb9c1264579389",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/14381824-40ac-4ac9-baa6-3600e136b68c/orig",
+        "_id": "65282efac23dc783b0e5fadd"
+      },
+      {
+        "id": "632e5e45aff710671ba8ed9f",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/ce998d30-523c-427f-8011-58fc85c99a95/orig",
+        "_id": "65282efac23dc783b0e5fade"
+      },
+      {
+        "id": "632e5a34a6587a30ae5eda72",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/7b0d81f7-f7ee-409b-8ec4-1ce8ce5bc276/orig",
+        "_id": "65282efac23dc783b0e5fadf"
+      }
+    ],
+    "answer": "632e5edcaff710671ba97d1c",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.699Z",
+    "updatedAt": "2023-10-12T17:38:02.699Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd1cf",
+    "questionText": "Кто на фото",
+    "question": {
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8529.jpg",
+      "_id": "65282efac23dc783b0e5e2e7"
+    },
+    "variants": [
+      {
+        "id": 8529,
+        "name": "Шэрон Стоун",
+        "_id": "65282efac23dc783b0e5e2e8"
+      },
+      {
+        "id": 21930,
+        "name": "Сет Грин",
+        "_id": "65282efac23dc783b0e5e2e9"
+      },
+      {
+        "id": 27045,
+        "name": "Бен Уишоу",
+        "_id": "65282efac23dc783b0e5e2ea"
+      },
+      {
+        "id": 34783,
+        "name": "Дэнни Макбрайд",
+        "_id": "65282efac23dc783b0e5e2eb"
+      }
+    ],
+    "answer": 8529,
+    "category": "world",
+    "testType": "PersonByPhoto",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.651Z",
+    "updatedAt": "2023-10-12T17:38:02.651Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fc238",
+    "questionText": "Угадайте фильм по кадру",
+    "question": {
+      "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/3221a1ab-fe59-4b0b-84a3-fc331b84366c/orig",
+      "_id": "65282efac23dc783b0e5fe3b"
+    },
+    "variants": [
+      {
+        "id": 938643,
+        "enName": null,
+        "name": "мама!",
+        "year": 2017,
+        "_id": "65282efac23dc783b0e5fe3c"
+      },
+      {
+        "id": 5502,
+        "enName": "Back to the Future Part 2",
+        "name": "Назад в будущее 2",
+        "year": 1989,
+        "_id": "65282efac23dc783b0e5fe3d"
+      },
+      {
+        "id": 158786,
+        "enName": null,
+        "name": "Жизнь Пи",
+        "year": 2012,
+        "_id": "65282efac23dc783b0e5fe3e"
+      },
+      {
+        "id": 1044601,
+        "enName": null,
+        "name": "Стекло",
+        "year": 2019,
+        "_id": "65282efac23dc783b0e5fe3f"
+      }
+    ],
+    "answer": 158786,
+    "category": "world",
+    "testType": "MovieByFrame",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.705Z",
+    "updatedAt": "2023-10-12T17:38:02.705Z"
+  },
+  {
+    "_id": "65282efac23dc783b0e5e8b6",
+    "questionText": "Кто на фото",
+    "question": {
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_22879.jpg",
+      "_id": "65282efac23dc783b0e5e8b7"
+    },
+    "variants": [
+      {
+        "id": 1638,
+        "name": "Лас Алонсо",
+        "_id": "65282efac23dc783b0e5e8b8"
+      },
+      {
+        "id": 22879,
+        "name": "Джеймс Франко",
+        "_id": "65282efac23dc783b0e5e8b9"
+      },
+      {
+        "id": 6266,
+        "name": "Майкл Рукер",
+        "_id": "65282efac23dc783b0e5e8ba"
+      },
+      {
+        "id": 10315,
+        "name": "Бен Мендельсон",
+        "_id": "65282efac23dc783b0e5e8bb"
+      }
+    ],
+    "answer": 22879,
+    "category": "world",
+    "testType": "PersonByPhoto",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.663Z",
+    "updatedAt": "2023-10-12T17:38:02.663Z"
+  },
+  {
+    "_id": "65282ef9c23dc783b0e5d026",
+    "questionText": "В каком году был снят фильм / первый сезон сериала",
+    "question": {
+      "id": 351,
+      "enName": null,
+      "name": "Красота по-американски",
+      "imageUrl": "https://st.kp.yandex.net/images/film_big/351.jpg",
+      "_id": "65282ef9c23dc783b0e5d027"
+    },
+    "variants": [
+      {
+        "id": 1999,
+        "year": 1999,
+        "_id": "65282ef9c23dc783b0e5d028"
+      },
+      {
+        "id": 1994,
+        "year": 1994,
+        "_id": "65282ef9c23dc783b0e5d029"
+      },
+      {
+        "id": 2000,
+        "year": 2000,
+        "_id": "65282ef9c23dc783b0e5d02a"
+      },
+      {
+        "id": 1998,
+        "year": 1998,
+        "_id": "65282ef9c23dc783b0e5d02b"
+      }
+    ],
+    "answer": 1999,
+    "category": "world",
+    "testType": "YearByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.607Z",
+    "updatedAt": "2023-10-12T17:38:02.607Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fb97c",
+    "questionText": "Какой фильм / первый сезон какого сериала снят в этом году",
+    "question": {
+      "_id": "65282ef9c23dc783b0e5cc7f",
+      "year": 2005
+    },
+    "variants": [
+      {
+        "id": 805092,
+        "enName": "The Expanse",
+        "name": "Пространство",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_805092.jpg",
+        "_id": "65282ef9c23dc783b0e5cc80"
+      },
+      {
+        "id": 81314,
+        "enName": null,
+        "name": "Отступники",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_81314.jpg",
+        "_id": "65282ef9c23dc783b0e5cc81"
+      },
+      {
+        "id": 595938,
+        "enName": "Thor 2",
+        "name": "Тор 2: Царство тьмы",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_595938.jpg",
+        "_id": "65282ef9c23dc783b0e5cc82"
+      },
+      {
+        "id": 5908,
+        "enName": null,
+        "name": "Кинг Конг",
+        "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_5908.jpg",
+        "_id": "65282ef9c23dc783b0e5cc83"
+      }
+    ],
+    "answer": 5908,
+    "category": "world",
+    "testType": "MovieByYear",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.596Z",
+    "updatedAt": "2023-10-12T17:38:02.596Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd729",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "Кадры",
+      "_id": "65282efac23dc783b0e5f901",
+      "year": 2013,
+      "enName": null
+    },
+    "variants": [
+      {
+        "id": "632e5f89aff710671baa19ea",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/a7229d61-387e-485e-a0cf-d33ef113a2f8/orig",
+        "_id": "65282efac23dc783b0e5f902"
+      },
+      {
+        "id": "632e5e2eaff710671ba8d5b8",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/8ec13978-e5e5-4430-b746-17398ce57d65/orig",
+        "_id": "65282efac23dc783b0e5f903"
+      },
+      {
+        "id": "632e61aeaff710671babf8e8",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/011c1743-c562-4465-b716-bc5f039f07da/orig",
+        "_id": "65282efac23dc783b0e5f904"
+      },
+      {
+        "id": "632e6089aff710671baafbe4",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/0f323248-5814-44ca-99c7-0bf3f82b39e6/orig",
+        "_id": "65282efac23dc783b0e5f905"
+      }
+    ],
+    "answer": "632e6089aff710671baafbe4",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.696Z",
+    "updatedAt": "2023-10-12T17:38:02.696Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd0ca",
+    "questionText": "Угадайте слоган по фильму",
+    "question": {
+      "name": "Сонная Лощина",
+      "imageUrl": "https://st.kp.yandex.net/images/film_big/5622.jpg",
+      "_id": "65282ef9c23dc783b0e5d33f",
+      "year": 1999,
+      "enName": null
+    },
+    "variants": [
+      {
+        "id": "В ад и обратно",
+        "_id": "65282ef9c23dc783b0e5d340",
+        "slogan": "В ад и обратно"
+      },
+      {
+        "id": "Твоё будущее в его руках",
+        "_id": "65282ef9c23dc783b0e5d341",
+        "slogan": "Твоё будущее в его руках"
+      },
+      {
+        "id": "Вы можете запереть двери. Вы можете закрыть окна. Но сможете ли вы пережить эту ночь?",
+        "_id": "65282ef9c23dc783b0e5d342",
+        "slogan": "Вы можете запереть двери. Вы можете закрыть окна. Но сможете ли вы пережить эту ночь?"
+      },
+      {
+        "id": "Уже не остановить",
+        "_id": "65282ef9c23dc783b0e5d343",
+        "slogan": "Уже не остановить"
+      }
+    ],
+    "answer": "Вы можете запереть двери. Вы можете закрыть окна. Но сможете ли вы пережить эту ночь?",
+    "category": "world",
+    "testType": "SloganByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.614Z",
+    "updatedAt": "2023-10-12T17:38:02.614Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fbb68",
+    "questionText": "Кто снимался в этом фильме",
+    "question": {
+      "name": "Ворон",
+      "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_12362.jpg",
+      "_id": "65282ef9c23dc783b0e5d549",
+      "year": 1994,
+      "enName": "The Crow I"
+    },
+    "variants": [
+      {
+        "id": 8213,
+        "name": "Хью Джекман",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8213.jpg",
+        "_id": "65282ef9c23dc783b0e5d54a"
+      },
+      {
+        "id": 36871,
+        "name": "Билли Ди Уильямс",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_36871.jpg",
+        "_id": "65282ef9c23dc783b0e5d54b"
+      },
+      {
+        "id": 7838,
+        "name": "Эрни Хадсон",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7838.jpg",
+        "_id": "65282ef9c23dc783b0e5d54c"
+      },
+      {
+        "id": 1462347,
+        "name": "ТиДжей Миллер",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1462347.jpg",
+        "_id": "65282ef9c23dc783b0e5d54d"
+      }
+    ],
+    "answer": 7838,
+    "category": "world",
+    "testType": "PersonByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.619Z",
+    "updatedAt": "2023-10-12T17:38:02.619Z"
+  },
+  {
+    "_id": "668409b05560ddc21a8fd100",
+    "questionText": "Кто снимался в этом фильме",
+    "question": {
+      "name": "Адвокат дьявола",
+      "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_3797.jpg",
+      "_id": "65282efac23dc783b0e5e04d",
+      "year": 1997,
+      "enName": "Devil's Advocate"
+    },
+    "variants": [
+      {
+        "id": 12193,
+        "name": "Хэролд Перрино",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_12193.jpg",
+        "_id": "65282efac23dc783b0e5e04e"
+      },
+      {
+        "id": 12591,
+        "name": "Пол Джаматти",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_12591.jpg",
+        "_id": "65282efac23dc783b0e5e04f"
+      },
+      {
+        "id": 41961,
+        "name": "Саймон Пегг",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41961.jpg",
+        "_id": "65282efac23dc783b0e5e050"
+      },
+      {
+        "id": 6322,
+        "name": "Крэйг Т. Нельсон",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6322.jpg",
+        "_id": "65282efac23dc783b0e5e051"
+      }
+    ],
+    "answer": 6322,
+    "category": "world",
+    "testType": "PersonByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.646Z",
+    "updatedAt": "2023-10-12T17:38:02.646Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a010b",
+    "questionText": "на каком фото изображен",
+    "question": {
+      "name": "Сон Кан-хо",
+      "_id": "65282efac23dc783b0e5ec05"
+    },
+    "variants": [
+      {
+        "id": 23723,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_23723.jpg",
+        "_id": "65282efac23dc783b0e5ec06"
+      },
+      {
+        "id": 1833677,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1833677.jpg",
+        "_id": "65282efac23dc783b0e5ec07"
+      },
+      {
+        "id": 10024,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10024.jpg",
+        "_id": "65282efac23dc783b0e5ec08"
+      },
+      {
+        "id": 266060,
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_266060.jpg",
+        "_id": "65282efac23dc783b0e5ec09"
+      }
+    ],
+    "answer": 266060,
+    "category": "world",
+    "testType": "PhotoByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.669Z",
+    "updatedAt": "2023-10-12T17:38:02.669Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fb793",
+    "questionText": "Угадайте фильм по актеру",
+    "question": {
+      "name": "Фредерик Форрест",
+      "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_14084.jpg",
+      "_id": "65282ef9c23dc783b0e5c1b1"
+    },
+    "variants": [
+      {
+        "id": 81314,
+        "enName": null,
+        "name": "Отступники",
+        "year": 2006,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/81314.jpg",
+        "_id": "65282ef9c23dc783b0e5c1b2"
+      },
+      {
+        "id": 354,
+        "enName": "Apocalypse Now Redux",
+        "name": "Апокалипсис сегодня",
+        "year": 1979,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/354.jpg",
+        "_id": "65282ef9c23dc783b0e5c1b3"
+      },
+      {
+        "id": 87789,
+        "enName": null,
+        "name": "Пророк",
+        "year": 2007,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/87789.jpg",
+        "_id": "65282ef9c23dc783b0e5c1b4"
+      },
+      {
+        "id": 498707,
+        "enName": null,
+        "name": "Женщина в черном",
+        "year": 2012,
+        "imageUrl": "https://st.kp.yandex.net/images/film_big/498707.jpg",
+        "_id": "65282ef9c23dc783b0e5c1b5"
+      }
+    ],
+    "answer": 354,
+    "category": "world",
+    "testType": "MovieByPerson",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.566Z",
+    "updatedAt": "2023-10-12T17:38:02.566Z"
+  },
+  {
+    "_id": "66840c4c6d3063a0837a01f9",
+    "questionText": "Кто снимался в этом фильме",
+    "question": {
+      "name": "Команда «А»",
+      "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_96452.jpg",
+      "_id": "65282efac23dc783b0e5e06b",
+      "year": 2010,
+      "enName": null
+    },
+    "variants": [
+      {
+        "id": 117,
+        "name": "Дженьюэри Джонс",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_117.jpg",
+        "_id": "65282efac23dc783b0e5e06c"
+      },
+      {
+        "id": 50896,
+        "name": "Доминик Купер",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_50896.jpg",
+        "_id": "65282efac23dc783b0e5e06d"
+      },
+      {
+        "id": 51434,
+        "name": "Брэдли Купер",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_51434.jpg",
+        "_id": "65282efac23dc783b0e5e06e"
+      },
+      {
+        "id": 4666,
+        "name": "Анна Попплуэлл",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4666.jpg",
+        "_id": "65282efac23dc783b0e5e06f"
+      }
+    ],
+    "answer": 51434,
+    "category": "world",
+    "testType": "PersonByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.646Z",
+    "updatedAt": "2023-10-12T17:38:02.646Z"
+  },
+  {
+    "_id": "66840b7954414a7dcd1fc073",
+    "questionText": "Угадайте кадр по фильму",
+    "question": {
+      "name": "Ромео + Джульетта",
+      "_id": "65282efac23dc783b0e5fa5d",
+      "year": 1996,
+      "enName": "William Shakespeare's Romeo + Juliet"
+    },
+    "variants": [
+      {
+        "id": "632f16aa6e8e3255d6af3de2",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/8ac65bc8-0562-4d57-9ed7-19205d6342e6/orig",
+        "_id": "65282efac23dc783b0e5fa5e"
+      },
+      {
+        "id": "632e5bc9b64b1e45ea942df7",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/7fc88046-0caf-4621-8229-df07fe45d5e7/orig",
+        "_id": "65282efac23dc783b0e5fa5f"
+      },
+      {
+        "id": "63335b942a2f49706d39a8fd",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/280a3727-16ce-47aa-99d3-8b3c25c271ea/orig",
+        "_id": "65282efac23dc783b0e5fa60"
+      },
+      {
+        "id": "632f12c06e8e3255d6946535",
+        "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/c7fd834f-c76b-41ca-9255-7f2f4657a6dd/orig",
+        "_id": "65282efac23dc783b0e5fa61"
+      }
+    ],
+    "answer": "632f12c06e8e3255d6946535",
+    "category": "world",
+    "testType": "FrameByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.698Z",
+    "updatedAt": "2023-10-12T17:38:02.698Z"
+  },
+  {
+    "_id": "66840c4c6d3063a08379ffb7",
+    "questionText": "Кто снимался в этом фильме",
+    "question": {
+      "name": "Ворон",
+      "imageUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_12362.jpg",
+      "_id": "65282ef9c23dc783b0e5d549",
+      "year": 1994,
+      "enName": "The Crow I"
+    },
+    "variants": [
+      {
+        "id": 8213,
+        "name": "Хью Джекман",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8213.jpg",
+        "_id": "65282ef9c23dc783b0e5d54a"
+      },
+      {
+        "id": 36871,
+        "name": "Билли Ди Уильямс",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_36871.jpg",
+        "_id": "65282ef9c23dc783b0e5d54b"
+      },
+      {
+        "id": 7838,
+        "name": "Эрни Хадсон",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7838.jpg",
+        "_id": "65282ef9c23dc783b0e5d54c"
+      },
+      {
+        "id": 1462347,
+        "name": "ТиДжей Миллер",
+        "imageUrl": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1462347.jpg",
+        "_id": "65282ef9c23dc783b0e5d54d"
+      }
+    ],
+    "answer": 7838,
+    "category": "world",
+    "testType": "PersonByMovie",
+    "__v": 0,
+    "createdAt": "2023-10-12T17:38:02.619Z",
+    "updatedAt": "2023-10-12T17:38:02.619Z"
+  }
+]

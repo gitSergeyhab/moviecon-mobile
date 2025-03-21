@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import { IconSymbol } from "@/shared/components/ui/IconSymbol";
 import { TopUserBlock } from "@/entities/TopUserBlok/TopUserBlock";
-import { AppTabs } from "@/entities/tabs/Tabs";
+import { AppTabs } from "@/entities/tabs/AppTabs";
 
 export default function TabLayout() {
   return (

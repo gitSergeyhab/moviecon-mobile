@@ -45,7 +45,7 @@ export const lightTheme: ColorTheme = {
   },
   buttonBg: {
     primary: "#351204",
-    secondary: "#885304",
+    secondary: "#d18006",
     tertiary: "#999595",
   },
   border: {
@@ -68,7 +68,7 @@ export const lightTheme: ColorTheme = {
   },
   buttonText: {
     primary: "#FFF",
-    secondary: "#999595",
+    secondary: "#FFF",
     tertiary: "#351204",
   },
   boxShadow: {

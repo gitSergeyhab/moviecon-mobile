@@ -12,7 +12,7 @@ export const AppTabs: FC<PropsWithChildren> = ({ children }) => {
     <ExpoTabs
       screenOptions={{
         tabBarActiveTintColor: colorTheme[theme].text.accent,
-        tabBarActiveBackgroundColor: colorTheme[theme].background.secondary,
+        tabBarActiveBackgroundColor: colorTheme[theme].background.primary,
         tabBarInactiveBackgroundColor: colorTheme[theme].background.secondary,
         headerShown: false,
         tabBarButton: HapticTab,

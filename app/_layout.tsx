@@ -39,8 +39,9 @@ const RootLayout = () => {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#311a1a" }}>
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
           <Stack.Screen name="auth" options={{ headerShown: false }} />
+          <Stack.Screen name="game" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="light" />
       </SafeAreaView>

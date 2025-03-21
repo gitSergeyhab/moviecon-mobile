@@ -18,10 +18,11 @@ export interface ButtonProps extends PressableProps {
   children?: ReactNode;
   variant?: ButtonType;
   isLoading?: boolean;
+  isDisabled?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { size, children, variant, isLoading, ...rest } = props;
+  const { size, children, variant, isLoading, isDisabled, ...rest } = props;
   const animatedValue = useRef(new Animated.Value(0)).current;
   const { theme } = useContext(ThemeContext);
   const styles = buttonStylesDict[size ?? "medium"];
@@ -57,6 +58,7 @@ export const Button: FC<ButtonProps> = (props) => {
         style={{
           ...(styles as object),
           backgroundColor: bgColor,
+          opacity: isDisabled ? 0.5 : 1,
         }}
       >
         {isLoading ? (

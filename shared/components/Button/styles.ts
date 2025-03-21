@@ -2,7 +2,7 @@ import { SizeType } from "@/type/ui";
 import { StyleSheet } from "react-native";
 
 export interface ButtonStyle {
-  height: number;
+  minHeight: number;
   fontSize: number;
   lineHeight: number;
   borderWidth: number;
@@ -14,7 +14,7 @@ export interface ButtonStyle {
 
 export const buttonStyles = StyleSheet.create({
   md: {
-    height: 40,
+    minHeight: 40,
     fontSize: 16,
     lineHeight: 1.2,
     borderWidth: 1,
@@ -24,17 +24,19 @@ export const buttonStyles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 10,
     elevation: 7,
+    textAlign: "center",
+    alignContent: "center",
     // boxShadow: "10px 10px 10px rgba(0, 0, 0, 0.67)",
   },
   sm: {
-    height: 32,
+    minHeight: 32,
     fontSize: 12,
     lineHeight: 1.2,
     borderWidth: 1,
     borderRadius: 4,
   },
   lg: {
-    height: 48,
+    minHeight: 48,
     fontSize: 18,
     lineHeight: 1.2,
     borderWidth: 1,

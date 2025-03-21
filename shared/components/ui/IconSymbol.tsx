@@ -33,14 +33,12 @@ export function IconSymbol({
   color,
   style,
 }: {
-  name: string;
+  name: keyof typeof MaterialIcons.glyphMap;
   // name: IconSymbolName;
   size?: number;
   color: string | OpaqueColorValue;
   style?: StyleProp<TextStyle>;
   weight?: SymbolWeight;
 }) {
-  return (
-    <MaterialIcons color={color} size={size} name={name as any} style={style} />
-  );
+  return <MaterialIcons color={color} size={size} name={name} style={style} />;
 }

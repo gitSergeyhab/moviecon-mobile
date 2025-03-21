@@ -1,16 +1,16 @@
 import { z } from "zod";
 
 const category = z.enum(["ussr", "rus", "world", "all"], {
-  message: "нужно выбрать из списка",
+  message: "выберете категорию из списка",
 });
 
 const duration = z.enum(["COMMON", "QUICK", "LONG"], {
-  message: "нужно выбрать из списка",
+  message: "выберете длительность из списка",
 });
 
-export const GameSelectionSchema = z.object({
+export const gameSelectionSchema = z.object({
   category,
   duration,
 });
 
-export type GameSelectionSchemaType = z.infer<typeof GameSelectionSchema>;
+export type GameSelectionSchemaType = z.infer<typeof gameSelectionSchema>;

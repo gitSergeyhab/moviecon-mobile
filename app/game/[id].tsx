@@ -1,16 +1,17 @@
 import { TopUserBlock } from "@/entities/TopUserBlok/TopUserBlock";
+import { ScreenWrapper } from "@/shared/components/ScreenWrapper/ScreenWrapper";
+import { Game } from "@/widgets/game/Game";
 import { useLocalSearchParams } from "expo-router";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 
 export default function GameScreen() {
   const { id } = useLocalSearchParams();
   return (
     <>
       <TopUserBlock />
-
-      <View>
-        <Text>Game Screen: {id}</Text>
-      </View>
+      <ScreenWrapper>
+        <Game />
+      </ScreenWrapper>
     </>
   );
 }

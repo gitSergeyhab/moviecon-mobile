@@ -1,22 +1,36 @@
 import { FC, useContext } from "react";
-import { Animated, Pressable, PressableProps } from "react-native";
+import { Animated, Pressable, PressableProps, View } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import ThemeContext from "@/lib/providers/ThemeProvider";
-import { Theme } from "@/type/ui";
+import { OutputColorRangeDict, Theme } from "@/type/ui";
+import { radius } from "@/lib/configs/ui/sizes";
 
-const outputRangeDict: Record<Theme, [string, string]> = {
+const outputRangeDictDefault: OutputColorRangeDict = {
   light: ["#3b2213", "#eb9c0a"],
   dark: ["#eb9c0a", "#3b2213"],
 };
 
 export interface IconButtonProps extends PressableProps {
   size: number;
-  name: string;
+  name: keyof typeof MaterialIcons.glyphMap;
   iconColor?: string;
+  outputRangeDict?: OutputColorRangeDict;
+  backgroundColor?: string;
+  paddingHorizontal?: number;
+  paddingVertical?: number;
 }
 
 export const IconButton: FC<IconButtonProps> = (props) => {
-  const { size, name, ...rest } = props;
+  const {
+    size,
+    name,
+    disabled,
+    backgroundColor = "transparent",
+    outputRangeDict = outputRangeDictDefault,
+    paddingHorizontal,
+    paddingVertical,
+    ...rest
+  } = props;
   const { theme } = useContext(ThemeContext);
 
   const animatedValue = new Animated.Value(0);
@@ -32,7 +46,7 @@ export const IconButton: FC<IconButtonProps> = (props) => {
   const onPressOut = () => {
     Animated.timing(animatedValue, {
       toValue: 0,
-      duration: 1000,
+      duration: 300,
       useNativeDriver: true,
     }).start();
   };
@@ -43,14 +57,23 @@ export const IconButton: FC<IconButtonProps> = (props) => {
   });
 
   return (
-    <Pressable {...rest} onPressIn={onPressIn} onPressOut={onPressOut}>
+    <Pressable
+      {...rest}
+      onPressIn={onPressIn}
+      disabled={disabled}
+      onPressOut={onPressOut}
+    >
       <Animated.View>
-        <Animated.Text style={{ color, padding: 8 }}>
-          <MaterialIcons
-            // @ts-ignore
-            name={name}
-            size={size}
-          />
+        <Animated.Text
+          style={{
+            color: disabled ? "#706e6c" : color,
+            backgroundColor,
+            borderRadius: radius.small,
+            paddingHorizontal,
+            paddingVertical,
+          }}
+        >
+          <MaterialIcons name={name} size={size} />
         </Animated.Text>
       </Animated.View>
     </Pressable>
