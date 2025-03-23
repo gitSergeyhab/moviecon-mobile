@@ -2,28 +2,30 @@ import { FC, useContext } from "react";
 import { InfoBarIcons } from "./InfoBarIcon";
 import { Text, View } from "react-native";
 import { IconSymbol } from "@/shared/components/ui/IconSymbol";
-import { Level } from "@/type/game";
+// import { Level } from "@/type/game";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import { styles } from "./styles";
+import { useSelector } from "react-redux";
+import { gameSelectors } from "@/store/game";
 
 export const InfoBar: FC = () => {
-  // const levelInfo = useSelector(gameSelectors.getLevelInfo);
-  // const testIndex = useSelector(gameSelectors.getCurrentTestIndex);
-  // const madeErrors = useSelector(gameSelectors.getMadeErrors);
-  // const madeSkips = useSelector(gameSelectors.getMadeSkips);
-  // const levelsCount = useSelector(gameSelectors.getLevelsCount);
-  const levelInfo: Level | null = {
-    errors: 8,
-    number: 1,
-    questions: 6,
-    skips: 8,
-    time: 100,
-  };
-  const testIndex = 2;
-  const madeErrors = 1;
-  const madeSkips = 1;
-  const levelsCount = 4;
+  const levelInfo = useSelector(gameSelectors.getLevelInfo);
+  const testIndex = useSelector(gameSelectors.getCurrentTestIndex);
+  const madeErrors = useSelector(gameSelectors.getMadeErrors);
+  const madeSkips = useSelector(gameSelectors.getMadeSkips);
+  const levelsCount = useSelector(gameSelectors.getLevelsCount);
+  // const levelInfo: Level | null = {
+  //   errors: 8,
+  //   number: 1,
+  //   questions: 6,
+  //   skips: 8,
+  //   time: 100,
+  // };
+  // const testIndex = 2;
+  // const madeErrors = 1;
+  // const madeSkips = 1;
+  // const levelsCount = 4;
 
   const { theme } = useContext(ThemeContext);
 

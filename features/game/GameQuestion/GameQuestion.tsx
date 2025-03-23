@@ -15,13 +15,11 @@ export interface GameQuestionProps {
   variant: Variant;
   testType: TestType;
   questionText: string;
-  // onImagePress: VoidFunction;
 }
 export const GameQuestion: FC<GameQuestionProps> = ({
   questionText,
   testType,
   variant,
-  // onImagePress,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { enName, image, primary, secondary } = getContents(

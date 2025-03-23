@@ -2,6 +2,7 @@ import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import { fontDict } from "@/lib/configs/ui/fonts";
 import { indent } from "@/lib/configs/ui/sizes";
 import ThemeContext from "@/lib/providers/ThemeProvider";
+import { cutString } from "@/lib/utils/string";
 import { FC, useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -44,22 +45,7 @@ export const PrimaryTextBlock: FC<PrimaryTextBlockProps> = ({
             },
           ]}
         >
-          {enText}
-        </Text>
-      )}
-
-      {secondary && (
-        <Text
-          style={[
-            styles.secondText,
-            {
-              color: isInBtn
-                ? colorTheme[theme].buttonText.primary
-                : colorTheme[theme].text.primary,
-            },
-          ]}
-        >
-          {secondary}
+          {cutString(enText as string, 32)} {secondary && `(${secondary})`}
         </Text>
       )}
     </View>

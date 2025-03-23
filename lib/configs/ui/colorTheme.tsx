@@ -17,7 +17,7 @@ export const darkTheme = {
   },
   buttonBgActive: {
     primary: "#beb9ad",
-    secondary: "#d18006",
+    secondary: "#965a01",
     tertiary: "#0f0501",
   },
   text: {

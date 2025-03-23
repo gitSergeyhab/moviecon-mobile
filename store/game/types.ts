@@ -26,4 +26,5 @@ export interface GameState {
   loadingStatus: RequestStatus;
   isTransition: boolean;
   isImagePreloading: boolean;
+  selectedAnswerId: string | null | number;
 }

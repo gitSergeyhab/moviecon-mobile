@@ -25,10 +25,11 @@
 import { Tabs } from "expo-router";
 import React from "react";
 import { IconSymbol } from "@/shared/components/ui/IconSymbol";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export interface AppTabProps {
   name: string;
-  iconName: string;
+  iconName: keyof typeof MaterialIcons.glyphMap;
   title: string;
 }
 

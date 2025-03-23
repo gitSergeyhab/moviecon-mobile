@@ -4,6 +4,7 @@ import { Image, Pressable, View } from "react-native";
 import { GameQuestionImageZoomButton } from "./GameQuestionImageZoomButton";
 
 import { styles } from "./styles";
+import { cutString } from "@/lib/utils/string";
 
 export interface GameQuestionWithTextAndImageProps {
   onImagePress: VoidFunction;
@@ -20,7 +21,7 @@ export const GameQuestionWithTextAndImage: FC<
       <View style={{ width: "50%", alignItems: "flex-end" }}>
         <QuestionTextBlock
           enText={enName}
-          secondary={secondary}
+          secondary={cutString(secondary || "", 6)}
           text={primary}
         />
       </View>

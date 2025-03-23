@@ -1,6 +1,6 @@
 import { useState, FC, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useImagePreload } from "@/hooks/useImagePreload";
+// import { useImagePreload } from "@/hooks/useImagePreload";
 import { gameActions, gameSelectors } from "@/store/game";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { Redirect } from "expo-router";
@@ -43,14 +43,15 @@ import { styles } from "./styles";
 // | "MovieByBudget"; / question = 100px / answer = 70% 2*2
 
 export const Game: FC = () => {
-  // const test = useSelector(gameSelectors.getCurrentTest);
-  const test = FrameByMovie as unknown as Test;
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const test = useSelector(gameSelectors.getCurrentTest);
+  console.log({ test });
+  // const test = FrameByMovie as unknown as Test;
+  console.log("Game");
   const isTransition = useSelector(gameSelectors.getIsTransition);
-  const nextQuestionImages = useSelector(gameSelectors.getNextQuestionImages);
+  // const nextQuestionImages = useSelector(gameSelectors.getNextQuestionImages);
   // const isPreLoadingImages = useSelector(gameSelectors.getIsLoadingImages);
   // useImagePreload(nextQuestionImages, !isPreLoadingImages);
-  useImagePreload(nextQuestionImages, true);
+  // useImagePreload(nextQuestionImages, true);
 
   const dispatch = useAppDispatch();
 

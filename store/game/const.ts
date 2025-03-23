@@ -19,4 +19,5 @@ export const initialState: GameState = {
   correctAnswerId: null,
   isTransition: false,
   isImagePreloading: false,
+  selectedAnswerId: null,
 };

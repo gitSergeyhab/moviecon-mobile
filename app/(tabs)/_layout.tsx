@@ -23,6 +23,11 @@ export default function TabLayout() {
       <TopUserBlock />
       <AppTabs>
         {createAppTab({
+          iconName: "emoji-events",
+          name: "records",
+          title: "Чемпионы",
+        })}
+        {createAppTab({
           iconName: "sports-esports",
           name: "index",
           title: "Игра",

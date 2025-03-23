@@ -12,8 +12,11 @@ const gameSlice = createSlice({
   initialState,
   name: "game",
   reducers: {
-    resetGame(_, { payload }: PayloadAction<{ isImgPreLoading: boolean }>) {
-      return { ...initialState, isImagePreloading: payload.isImgPreLoading };
+    resetGame(_, { payload }: PayloadAction<{ isImgPreLoading?: boolean }>) {
+      return {
+        ...initialState,
+        isImagePreloading: Boolean(payload.isImgPreLoading),
+      };
     },
     startGame(state, { payload }: PayloadAction<{ gameId: string }>) {
       state.gameId = payload.gameId;
@@ -21,6 +24,7 @@ const gameSlice = createSlice({
     setNextQuestion(state) {
       state.currentTestIndex++;
       state.correctAnswerId = null;
+      state.selectedAnswerId = null;
     },
 
     setTransition(state, { payload }: PayloadAction<boolean>) {
@@ -29,6 +33,12 @@ const gameSlice = createSlice({
 
     setImgPreloading(state, { payload }: PayloadAction<boolean>) {
       state.isImagePreloading = payload;
+    },
+    setSelectedAnswerId(
+      state,
+      { payload }: PayloadAction<string | number | null>
+    ) {
+      state.selectedAnswerId = payload;
     },
   },
   extraReducers: (builder) => {
@@ -58,11 +68,14 @@ const gameSlice = createSlice({
 
     builder.addCase(fetchStartLevel.pending, (state) => {
       state.loadingStatus = "loading";
+      state.selectedAnswerId = null;
     });
     builder.addCase(fetchStartLevel.rejected, (state) => {
       state.loadingStatus = "failed";
     });
     builder.addCase(fetchStartLevel.fulfilled, (state, { payload }) => {
+      console.log("fetchStartLevel.fulfilled b", state.selectedAnswerId);
+
       state.loadingStatus = "success";
       const { gameStatus } = payload;
       state.gameStatus = gameStatus;
@@ -71,6 +84,8 @@ const gameSlice = createSlice({
       state.levelSkipped = 0;
       state.answerStatuses = state.levelTestsIds.map(() => "none");
       state.currentTestIndex = 0;
+      // state.selectedAnswerId = null;
+      console.log("fetchStartLevel.fulfilled a", state.selectedAnswerId);
     });
 
     builder.addCase(fetchAnswerQuestion.pending, (state) => {

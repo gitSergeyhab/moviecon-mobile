@@ -1,56 +1,70 @@
 import { FC } from "react";
-import { useSelector } from "react-redux";
 import { VariantBlocksByTestType } from "@/lib/configs/game/config";
 import { TestType, Variant } from "@/type/game";
-import { gameSelectors } from "@/store/game";
 import { getContents } from "@/lib/utils/game";
-import { Dimensions, View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { VariantImageBlock } from "./VariantImageBlock";
 import { indent, radius } from "@/lib/configs/ui/sizes";
 import { gameUISettings } from "@/lib/configs/game/ui";
 import { ZoomButton } from "./ZoomButton";
 import { CheckIconButton } from "./CheckIconButton";
 import { CheckButton } from "./CheckButton";
+import { getVariantOpacity, getVariantWidth } from "./helpers";
+import { RequestStatus } from "@/type/ui";
+import { AnswerStatus } from "./types";
+import { colorVariantDict } from "./constants";
 
 export interface GameQuestionProps {
   variant: Variant;
   testType: TestType;
   onImagePress: VoidFunction;
   onButtonPress: VoidFunction;
-  selectedId: string | number | null;
-  correctId: string | number | null;
+  selectedAnswerId: string | number | null;
+  loadingStatus: RequestStatus;
+  answerStatus: AnswerStatus;
 }
 export const GameVariant: FC<GameQuestionProps> = ({
   testType,
   variant,
-  // selectedId,
-  // correctId,
   onImagePress,
   onButtonPress,
+  loadingStatus,
+  selectedAnswerId,
+  answerStatus,
 }) => {
-  const isAnswerDone = useSelector(gameSelectors.getIsAnswerDone);
-  const loadingStatus = useSelector(gameSelectors.getLoadingStatus);
   const { enName, image, primary, secondary } = getContents(
     VariantBlocksByTestType,
     testType,
     variant
   );
 
+  console.log({ loadingStatus, answerStatus, selectedAnswerId });
+
   const {
     answer: { hasTextBlock, hasImage, grid, hasBgImage },
   } = gameUISettings[testType];
+
+  const answerColor = colorVariantDict[answerStatus];
 
   return (
     <View
       style={[
         styles.container,
         {
-          height: grid === "4*1" ? "24%" : "48%",
-          width:
-            grid === "4*1"
-              ? "100%"
-              : Dimensions.get("screen").width / 2 - indent.x3,
+          height: grid === "4*1" ? "23%" : "48%",
+          width: getVariantWidth(grid),
           padding: hasBgImage ? 0 : indent.x1,
+          backgroundColor: answerColor,
+          borderColor: answerColor,
+          opacity: getVariantOpacity(
+            selectedAnswerId,
+            loadingStatus,
+            variant.id
+          ),
+          pointerEvents:
+            Boolean(selectedAnswerId) || loadingStatus === "loading"
+              ? "none"
+              : "auto",
         },
       ]}
     >
@@ -61,7 +75,6 @@ export const GameVariant: FC<GameQuestionProps> = ({
           testType={testType}
         />
       )}
-
       {hasTextBlock && (
         <CheckButton
           enName={enName}
@@ -81,7 +94,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: radius.small,
     gap: indent.x1,
     overflow: "hidden",

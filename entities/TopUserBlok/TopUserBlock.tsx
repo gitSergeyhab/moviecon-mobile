@@ -4,6 +4,7 @@ import { fontDict } from "@/lib/configs/ui/fonts";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 import { cutString } from "@/lib/utils/string";
 import { IconButton } from "@/shared/components/Button/IconButton";
+import { HEADER_HEIGHT } from "@/shared/constants/ui";
 import { userSelectors } from "@/store/user";
 import { useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
@@ -39,9 +40,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    borderBottomWidth: 1,
+    borderBottomWidth: 1.5,
     borderBottomColor: colorTheme.light.border.accent,
-    height: 48,
+    height: HEADER_HEIGHT,
     paddingHorizontal: 12,
   },
   user: {

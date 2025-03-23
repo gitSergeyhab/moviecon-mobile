@@ -10,6 +10,7 @@ import {
 import { RootState } from "../";
 import { createSelector } from "@reduxjs/toolkit";
 import { RequestStatus } from "@/type/ui";
+import { getResultVariants } from "./helpers";
 
 export const getGameStatus = (state: RootState): GameStatus =>
   state.game.gameStatus;
@@ -31,16 +32,8 @@ export const getLoadingStatus = (state: RootState): RequestStatus =>
 export const getCurrentTestIndex = (state: RootState): number =>
   state.game.currentTestIndex;
 
-export const getIsAnswerDone = createSelector(
-  getAnswerStatuses,
-  getCurrentTestIndex,
-  (statuses, index): boolean | null => {
-    if (!statuses || !statuses.length) return null;
-    const status = statuses[index];
-    if (!status) return null;
-    return status !== "none";
-  }
-);
+export const getSelectedAnswerId = (state: RootState): string | number | null =>
+  state.game.selectedAnswerId;
 
 export const getTestIndexes = (state: RootState): string[] =>
   state.game.levelTestsIds;
@@ -136,7 +129,11 @@ export const getCurrentTest = createSelector(
   getTestIndexes,
   (index, dict, ids): Test | null => {
     if (!dict) return null;
-    return dict[ids[index]] || null;
+    const test = dict[ids[index]];
+    if (!test) return null;
+    // попадаются варианты с одинаковыми id
+    const variants = getResultVariants(Object.values(test.variants));
+    return { ...test, variants };
   }
 );
 
