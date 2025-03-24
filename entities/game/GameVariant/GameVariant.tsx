@@ -2,7 +2,7 @@ import { FC } from "react";
 import { VariantBlocksByTestType } from "@/lib/configs/game/config";
 import { TestType, Variant } from "@/type/game";
 import { getContents } from "@/lib/utils/game";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { VariantImageBlock } from "./VariantImageBlock";
 import { indent, radius } from "@/lib/configs/ui/sizes";
 import { gameUISettings } from "@/lib/configs/game/ui";

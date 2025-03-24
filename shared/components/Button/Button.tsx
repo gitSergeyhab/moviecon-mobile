@@ -5,7 +5,9 @@ import {
   Animated,
   Pressable,
   PressableProps,
+  StyleProp,
   Text,
+  ViewStyle,
 } from "react-native";
 import { btnTextStyles, buttonStylesDict } from "./styles";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
@@ -19,6 +21,7 @@ export interface ButtonProps extends PressableProps {
   variant?: ButtonType;
   isLoading?: boolean;
   isDisabled?: boolean;
+  styles?: StyleProp<ViewStyle>;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -55,11 +58,14 @@ export const Button: FC<ButtonProps> = (props) => {
       onPressOut={() => animateTo(0)}
     >
       <Animated.View
-        style={{
-          ...(styles as object),
-          backgroundColor: bgColor,
-          opacity: isDisabled ? 0.5 : 1,
-        }}
+        style={[
+          {
+            ...(styles as object),
+            backgroundColor: bgColor,
+            opacity: isDisabled ? 0.5 : 1,
+          },
+          props.styles,
+        ]}
       >
         {isLoading ? (
           <ActivityIndicator size={24} color={buttonText} />

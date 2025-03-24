@@ -1,10 +1,10 @@
 import { ScreenWrapper } from "@/shared/components/ScreenWrapper/ScreenWrapper";
-import { Text } from "react-native";
+import { Stats } from "@/widgets/Stats/Stats";
 
-export default function Stats() {
+export default function StatsScreen() {
   return (
     <ScreenWrapper>
-      <Text>Stats</Text>
+      <Stats />
     </ScreenWrapper>
   );
 }
