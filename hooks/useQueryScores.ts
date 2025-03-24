@@ -6,5 +6,5 @@ export const useQueryScores = () => {
     queryKey: ["scores"],
     queryFn: requestScores$,
   });
-  return { makeShareableCloneRecursive: data, isLoading, isError };
+  return { scoresData: data, isLoading, isError };
 };

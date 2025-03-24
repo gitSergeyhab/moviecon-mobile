@@ -1,15 +1,14 @@
 import { FC } from "react";
 import { GameCategory, GameDuration } from "@/type/game";
-import { ActivityIndicator, Text, View } from "react-native";
+import { Dimensions, View } from "react-native";
 import { useQueryRecordsByParams } from "@/hooks/useQueryRecordsByParams";
-import { ScreenError } from "@/entities/ScreenError/ScreenError";
 import { Table } from "@/shared/components/Table/Table";
 import { toDayMonthYear } from "@/lib/utils/date";
 import { cutString } from "@/lib/utils/string";
-import { useGetAppTheme } from "@/hooks/useGetAppTheme";
 import { useGetDefaultTableStyle } from "@/hooks/useGetDefaultTableStyle";
-import { fontDict } from "@/lib/configs/ui/fonts";
-import { indent } from "@/lib/configs/ui/sizes";
+import { BlockLoader } from "@/entities/BlockLoader/BlockLoader";
+import { BlockError } from "@/entities/BlockError/BlockError";
+import { styles } from "../styles";
 
 const tableHeaders = ["#", "Дата", "Имя", "Счет"];
 const tableWidths = [10, 22, 50, 18];
@@ -28,18 +27,27 @@ export const TablesSection: FC<TablesSectionProps> = ({
   });
 
   const tableStyles = useGetDefaultTableStyle();
-  const theme = useGetAppTheme();
 
   if (isLoading) {
-    return <ActivityIndicator />;
+    return <BlockLoader height={Dimensions.get("screen").height / 5} />;
   }
 
-  if (isError || !records) {
-    return <ScreenError text="Не удалось загрузить данные таблицы рекордов" />;
+  if (isError) {
+    return (
+      <BlockError
+        height={Dimensions.get("screen").height / 5}
+        text="Не удалось загрузить данные"
+      />
+    );
   }
 
   if (!records || !records.length) {
-    return <Text>Нет данных для отображения</Text>;
+    return (
+      <BlockError
+        height={Dimensions.get("screen").height / 5}
+        text="Недостаточно данных для построения таблицы"
+      />
+    );
   }
 
   const tableRecords = records.map(({ createdAt, userName, score }, i) => [
@@ -51,16 +59,7 @@ export const TablesSection: FC<TablesSectionProps> = ({
 
   console.log({ records });
   return (
-    <View style={{ paddingHorizontal: 10, marginTop: indent.x2 }}>
-      <Text
-        style={{
-          fontSize: fontDict.subtitle,
-          fontWeight: "700",
-          color: theme.text.primary,
-        }}
-      >
-        Наши рекордсмены
-      </Text>
+    <View style={styles.tabsSectionContainer}>
       <Table
         columns={tableHeaders}
         data={tableRecords}

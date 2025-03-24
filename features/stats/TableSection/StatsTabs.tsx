@@ -1,6 +1,6 @@
-import { indent } from "@/lib/configs/ui/sizes";
 import { Button } from "@/shared/components/Button/Button";
 import { StyleProp, View, ViewStyle } from "react-native";
+import { styles } from "../styles";
 
 interface StatsTabsData<T extends string> {
   label: string;
@@ -23,14 +23,7 @@ export const StatsTabs = <T extends string>({
   btnStyle = { minHeight: 36, borderRadius: 0 },
 }: StatsTabsProps<T>) => {
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap,
-      }}
-    >
+    <View style={[styles.tabsContainer, { gap }]}>
       {tabData.map(({ label, value }) => (
         <View style={{ width: "24%", flex: 1 }} key={value}>
           <Button
