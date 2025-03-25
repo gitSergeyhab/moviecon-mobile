@@ -8,11 +8,11 @@ import { BlockError } from "@/entities/BlockError/BlockError";
 import { useGetAppTheme } from "@/hooks/useGetAppTheme";
 import { styles } from "../styles";
 
-export interface TablesSectionProps {
+export interface GraphicSectionProps {
   duration: GameDuration;
   category: GameCategory;
 }
-export const GraphicSection: FC<TablesSectionProps> = ({
+export const GraphicSection: FC<GraphicSectionProps> = ({
   duration,
   category,
 }) => {

@@ -9,6 +9,8 @@ import { useGetDefaultTableStyle } from "@/hooks/useGetDefaultTableStyle";
 import { BlockLoader } from "@/entities/BlockLoader/BlockLoader";
 import { BlockError } from "@/entities/BlockError/BlockError";
 import { styles } from "../styles";
+import { useSelector } from "react-redux";
+import { userSelectors } from "@/store/user";
 
 const tableHeaders = ["#", "Дата", "Имя", "Счет"];
 const tableWidths = [10, 22, 50, 18];
@@ -25,7 +27,15 @@ export const TablesSection: FC<TablesSectionProps> = ({
     category,
     limit: 20,
   });
+  const user = useSelector(userSelectors.getUser);
+  const userRecordRowIndexes = records?.reduce((acc, record, i) => {
+    if (record.userId === user?.id) {
+      acc.push(i);
+    }
+    return acc;
+  }, [] as number[]);
 
+  console.log({ userRecordRowIndexes });
   const tableStyles = useGetDefaultTableStyle();
 
   if (isLoading) {
@@ -66,6 +76,9 @@ export const TablesSection: FC<TablesSectionProps> = ({
         columnWidths={tableWidths}
         rowHeight={30}
         alignItems="flex-start"
+        accentRow={{
+          indexes: userRecordRowIndexes || [],
+        }}
         {...tableStyles}
       />
     </View>

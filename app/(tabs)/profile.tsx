@@ -1,10 +1,10 @@
 import { ScreenWrapper } from "@/shared/components/ScreenWrapper/ScreenWrapper";
-import { Text } from "react-native";
+import { Profile } from "@/widgets/Profile/Profile";
 
-export default function Profile() {
+export default function ProfileScreen() {
   return (
     <ScreenWrapper>
-      <Text>Profile</Text>
+      <Profile />
     </ScreenWrapper>
   );
 }

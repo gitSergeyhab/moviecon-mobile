@@ -1,6 +1,6 @@
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import { fontDict } from "@/lib/configs/ui/fonts";
-import { indent } from "@/lib/configs/ui/sizes";
+import { indent, radius } from "@/lib/configs/ui/sizes";
 import { Dimensions, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   },
   tabsContainer: {
     flexDirection: "row",
+    width: "100%",
     flexWrap: "wrap",
     justifyContent: "center",
   },
@@ -23,7 +24,13 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "center",
-    width: 200,
+    // width: 200,
+    borderColor: colorTheme.light.border.accent,
+    borderWidth: 2,
+    paddingHorizontal: indent.x7,
+    gap: indent.x7,
+    borderRadius: radius.large,
+    marginTop: indent.x2,
   },
   userResultText: {
     fontWeight: "700",

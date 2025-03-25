@@ -5,7 +5,7 @@ import { HapticTab } from "@/shared/components/HapticTab";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 
-export const AppTabs: FC<PropsWithChildren> = ({ children }) => {
+export const ScreenTabs: FC<PropsWithChildren> = ({ children }) => {
   const { theme } = useContext(ThemeContext);
 
   return (

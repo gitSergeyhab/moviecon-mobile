@@ -1,5 +1,8 @@
 import { GameCategory, GameDuration } from "@/type/game";
-import { categoryTranslate, durationTranslate } from "./game";
+import {
+  categoryTranslate,
+  durationTranslate,
+} from "../../shared/constants/game";
 
 export type DurationTabTata = { label: string; value: GameDuration };
 export type CategoryTabTata = { label: string; value: GameCategory };

@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import React from "react";
 import { getUser, getUserStatus } from "@/store/user/selectors";
 import { TopUserBlock } from "@/entities/TopUserBlok/TopUserBlock";
-import { AppTabs } from "@/entities/tabs/AppTabs";
-import { createAppTab } from "@/entities/tabs/AppTab";
+import { ScreenTabs } from "@/entities/Screentabs/ScreenTabs";
+import { createScreenTab } from "@/entities/Screentabs/ScreenTab";
 
 export default function TabLayout() {
   const user = useSelector(getUser);
@@ -21,28 +21,28 @@ export default function TabLayout() {
   return (
     <>
       <TopUserBlock />
-      <AppTabs>
-        {createAppTab({
+      <ScreenTabs>
+        {createScreenTab({
           iconName: "emoji-events",
           name: "records",
           title: "Чемпионы",
         })}
-        {createAppTab({
+        {createScreenTab({
           iconName: "sports-esports",
           name: "index",
           title: "Игра",
         })}
-        {createAppTab({
+        {createScreenTab({
           iconName: "person",
           name: "profile",
           title: "Профиль",
         })}
-        {createAppTab({
+        {createScreenTab({
           iconName: "query-stats",
           name: "stats",
           title: "Статистика",
         })}
-      </AppTabs>
+      </ScreenTabs>
     </>
   );
 }

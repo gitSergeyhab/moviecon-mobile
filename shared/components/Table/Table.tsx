@@ -14,6 +14,10 @@ export interface TableProps {
   cellTextStyle?: StyleProp<TextStyle>;
   borderColor?: string;
   alignItems?: "center" | "flex-start" | "flex-end" | "stretch";
+  accentRow?: {
+    indexes: number[];
+    color?: string;
+  };
 }
 
 export const Table: FC<TableProps> = ({
@@ -27,6 +31,7 @@ export const Table: FC<TableProps> = ({
   cellTextStyle,
   borderColor = colorTheme.dark.border.accent,
   alignItems = "center",
+  accentRow,
 }) => {
   return (
     <View style={[styles.table]}>
@@ -70,7 +75,20 @@ export const Table: FC<TableProps> = ({
               ]}
             >
               {typeof cell === "string" || typeof cell === "number" ? (
-                <Text style={[styles.cellText, cellTextStyle]}>{cell}</Text>
+                <Text
+                  style={[
+                    styles.cellText,
+                    cellTextStyle,
+                    accentRow?.indexes.includes(rowIndex)
+                      ? {
+                          color:
+                            accentRow?.color || colorTheme.dark.text.accent,
+                        }
+                      : {},
+                  ]}
+                >
+                  {cell}
+                </Text>
               ) : (
                 cell
               )}

@@ -1,11 +1,11 @@
 import { GraphicSection } from "@/features/stats/GraphicSection/GraphicSection";
-import { StatsTabs } from "@/features/stats/TableSection/StatsTabs";
+import { AppTabs } from "@/entities/AppTabs/AppTabs";
 import { TablesSection } from "@/features/stats/TableSection/TableSection";
 import { UserResult } from "@/features/stats/UserResult";
 import { useGetAppTheme } from "@/hooks/useGetAppTheme";
 import { ScreenHeader } from "@/shared/components/ui/texts";
 import { categoryTranslate, durationTranslate } from "@/shared/constants/game";
-import { categoryTabData, durationTabData } from "@/shared/constants/stats";
+import { categoryTabData, durationTabData } from "@/entities/AppTabs/constants";
 import { GameCategory, GameDuration } from "@/type/game";
 import { FC, useState } from "react";
 import { Platform, ScrollView, Text, View } from "react-native";
@@ -26,12 +26,12 @@ export const Stats: FC = () => {
     <View style={styles.container}>
       <ScreenHeader>Статистика</ScreenHeader>
       <View style={styles.tabsWrapper}>
-        <StatsTabs
+        <AppTabs
           onPress={onClickCategory}
           selectedValue={category}
           tabData={categoryTabData}
         />
-        <StatsTabs
+        <AppTabs
           onPress={onClickDuration}
           selectedValue={duration}
           tabData={durationTabData}

@@ -1,13 +1,13 @@
 import { Tabs } from "expo-router";
 import { IconSymbol } from "@/shared/components/ui/IconSymbol";
 import { TopUserBlock } from "@/entities/TopUserBlok/TopUserBlock";
-import { AppTabs } from "@/entities/tabs/AppTabs";
+import { ScreenTabs } from "@/entities/Screentabs/ScreenTabs";
 
 export default function TabLayout() {
   return (
     <>
       <TopUserBlock />
-      <AppTabs>
+      <ScreenTabs>
         <Tabs.Screen
           name="index"
           options={{
@@ -26,7 +26,7 @@ export default function TabLayout() {
             ),
           }}
         />
-      </AppTabs>
+      </ScreenTabs>
     </>
   );
 }

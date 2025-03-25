@@ -1,5 +1,5 @@
 import { useQueryRecords } from "@/hooks/useQueryRecords";
-import { ActivityIndicator, Text } from "react-native";
+import { Text } from "react-native";
 import { ScreenWrapper } from "@/shared/components/ScreenWrapper/ScreenWrapper";
 import { ScreenLoader } from "@/entities/ScreenLoader/ScreenLoader";
 

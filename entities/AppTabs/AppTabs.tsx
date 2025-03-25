@@ -1,31 +1,33 @@
 import { Button } from "@/shared/components/Button/Button";
 import { StyleProp, View, ViewStyle } from "react-native";
-import { styles } from "../styles";
+import { styles } from "../../features/stats/styles";
 
-interface StatsTabsData<T extends string> {
+interface AppTabsData<T extends string> {
   label: string;
   value: T;
 }
 
 export interface StatsTabsProps<T extends string> {
-  tabData: StatsTabsData<T>[];
+  tabData: AppTabsData<T>[];
   onPress: (value: T) => void;
   selectedValue: T;
   btnStyle?: StyleProp<ViewStyle>;
   gap?: number;
+  viewStyle?: StyleProp<ViewStyle>;
 }
 
-export const StatsTabs = <T extends string>({
+export const AppTabs = <T extends string>({
   tabData,
   onPress,
   selectedValue,
   gap,
   btnStyle = { minHeight: 36, borderRadius: 0 },
+  viewStyle,
 }: StatsTabsProps<T>) => {
   return (
-    <View style={[styles.tabsContainer, { gap }]}>
+    <View style={[styles.tabsContainer, { gap }, viewStyle]}>
       {tabData.map(({ label, value }) => (
-        <View style={{ width: "24%", flex: 1 }} key={value}>
+        <View style={{ flex: 1 }} key={value}>
           <Button
             size="xSmall"
             onPress={() => onPress(value)}

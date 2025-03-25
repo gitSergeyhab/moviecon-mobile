@@ -15,3 +15,10 @@ export const durationTranslate: DurationTranslate = {
   COMMON: "Стандартная игра",
   LONG: "Большая игра",
 };
+
+export type GameResultStatus = "WON" | "LOST" | "ENDED";
+export const statusTranslate: Record<GameResultStatus, string> = {
+  WON: "Победа",
+  LOST: "Поражение",
+  ENDED: "Прервана",
+};
