@@ -7,7 +7,6 @@ import { request } from "@/lib/api";
 export interface UserResultsQuery {
   limit: number;
   sort: "1" | "-1";
-  // offset: number;
   category: GameCategory | "none";
   type: GameType;
   duration: GameDuration | "none";
@@ -23,7 +22,6 @@ const filterParams = (
       filteredQuery[key] = value;
     }
   });
-  console.log({ filteredQuery });
   return filteredQuery;
 };
 
@@ -66,10 +64,6 @@ export const useQueryUserResultsByLoadMore = (params: UserResultsQuery) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userResults]);
-
-  // const loadMore = () => {
-  //   setOffset((prev) => prev + params.limit);
-  // };
 
   return {
     results: allResults,

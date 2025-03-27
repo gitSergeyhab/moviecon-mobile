@@ -1,5 +1,4 @@
 import { useGetAppTheme } from "@/hooks/useGetAppTheme";
-import { useTheme } from "@react-navigation/native";
 import { FC } from "react";
 import { ActivityIndicator, View } from "react-native";
 

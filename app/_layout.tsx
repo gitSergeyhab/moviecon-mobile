@@ -2,6 +2,8 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import Toast from "react-native-toast-message";
+
 import "react-native-reanimated";
 import { store } from "@/store";
 import { fetchUser } from "@/store/user/thunks";
@@ -49,6 +51,7 @@ export default function RootLayoutWithProviders() {
   return (
     <Providers>
       <RootLayout />
+      <Toast />
     </Providers>
   );
 }

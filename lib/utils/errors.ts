@@ -1,24 +1,9 @@
 import { UseFormSetError, Path } from "react-hook-form";
 import { ApiError, ApiResponse } from "@/type/api";
-// import { toastError } from "./toast";
-// TODO: !Toasts
-
+import { showToast } from "./toasts";
 type StringDict = Record<string, string>;
 
-export const setFormErrors = <T extends StringDict>(
-  e: ApiError,
-  setError: UseFormSetError<T>
-): void => {
-  const errors = (e as ApiError).errors;
-  errors.forEach((err) => {
-    setError(err.name as Path<T>, {
-      type: "server",
-      message: err.message,
-    });
-  });
-};
-
-export const getErrorMessage = (response: ApiResponse): string | null => {
+export const getErrorMessage = (response: ApiResponse): string => {
   const { data, status } = response;
   if (data?.message) return data.message;
   const errors = data?.errors;
@@ -27,7 +12,28 @@ export const getErrorMessage = (response: ApiResponse): string | null => {
   if (status === 401) return "Ошибка авторизации";
   if (status === 403) return "Доступ запрещен";
   if (status === 500) return "Внутренняя ошибка сервера";
-  return null;
+
+  return "Произошла ошибка";
+};
+
+export const setFormErrors = <T extends StringDict>(
+  e: ApiError,
+  setError: UseFormSetError<T>
+): void => {
+  try {
+    const errors = (e as ApiError).errors;
+    errors.forEach((err) => {
+      setError(err.name as Path<T>, {
+        type: "server",
+        message: err.message,
+      });
+    });
+  } catch (err) {
+    console.error(err);
+    showToast({
+      message: getErrorMessage(e),
+    });
+  }
 };
 
 export const handledRequest =

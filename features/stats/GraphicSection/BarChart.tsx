@@ -28,7 +28,6 @@ export const BarChart: FC<BarChartProps> = ({
       }}
     >
       {({ points, chartBounds }) => {
-        console.log({ points, chartBounds }, points.count);
         return (
           <Bar
             chartBounds={chartBounds}

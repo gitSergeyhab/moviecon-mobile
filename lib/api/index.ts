@@ -34,6 +34,7 @@ const createRequestInstance = (addAuthHeader: boolean): AppApi => {
         response: ApiResponse;
         config: InternalAxiosRequestConfig;
       };
+
       const { data, status } = response;
       const errors = data?.errors || [];
 

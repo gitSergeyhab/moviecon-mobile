@@ -4,7 +4,6 @@ import {
 } from "@/entities/gameSelector/constants";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { useAppForm } from "@/hooks/useAppForm";
-import { request } from "@/lib/api";
 import { requestStartGame$ } from "@/lib/api/game";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import { fontDict } from "@/lib/configs/ui/fonts";
@@ -20,7 +19,6 @@ import {
 import { gameActions } from "@/store/game";
 import { ApiError } from "@/type/api";
 import { router } from "expo-router";
-import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function GameSelector() {
@@ -33,27 +31,9 @@ export default function GameSelector() {
 
   const dispatch = useAppDispatch();
 
-  // useEffect(() => {
-  //   request
-  //     .get("/test/random-quests?category=world&count=40")
-  //     .then((data) => console.log(data));
-  //   // data.forEach((i) => {
-  //   //   console.log({ i });
-  //   //   console.log(i.variants);
-  //   // })
-  // }, []);
-
-  // const onSubmit = handleSubmit((data) => {
-  //   console.log(data);
-  //   router.push("/game");
-  // });
-  // router.push("/game/1");
-
   const onSubmit = async (data: GameSelectionSchemaType) => {
-    console.log({ data }, "onSubmit");
     try {
       const response = await requestStartGame$(data);
-      console.log({ response });
       dispatch(gameActions.startGame(response));
       router.push(`/game/${response.gameId}`);
     } catch (e) {

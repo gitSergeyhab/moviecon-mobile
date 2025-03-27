@@ -30,6 +30,12 @@ export const PasswordInputController = <T extends FieldValues>({
       control={control}
       render={({ field }) => (
         <PasswordInput {...field} {...props} onChangeText={field.onChange} />
+        // <PasswordInput
+        //   {...props}
+        //   value={field.value} // Явно передаём value
+        //   onChangeText={field.onChange}
+        //   onBlur={field.onBlur} // Добавляем onBlur для react-hook-form
+        // />
       )}
     />
     <FieldError error={error} />

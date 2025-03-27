@@ -10,7 +10,7 @@ import { categoryTabData, durationTabData } from "@/entities/AppTabs/constants";
 import { UserResultsTable } from "./UserResultsTable";
 import { Text, View } from "react-native";
 import { defaultQuery } from "./constants";
-import { set } from "react-hook-form";
+import { showToast } from "@/lib/utils/toasts";
 
 export const UserResults = () => {
   const [duration, setDuration] = useState<GameDuration | "none">("COMMON");
@@ -102,6 +102,9 @@ export const UserResults = () => {
             Загрузить еще
           </Button>
         )}
+        <Button onPress={() => showToast({ message: "Тестовое сообщение" })}>
+          Button
+        </Button>
       </View>
     </>
   );

@@ -38,8 +38,6 @@ export const GameVariant: FC<GameQuestionProps> = ({
     variant
   );
 
-  console.log({ loadingStatus, answerStatus, selectedAnswerId });
-
   const {
     answer: { hasTextBlock, hasImage, grid, hasBgImage },
   } = gameUISettings[testType];

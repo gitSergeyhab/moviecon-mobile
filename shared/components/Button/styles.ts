@@ -27,7 +27,6 @@ export const buttonStyles = StyleSheet.create({
     elevation: 7,
     textAlign: "center",
     alignContent: "center",
-    // boxShadow: "10px 10px 10px rgba(0, 0, 0, 0.67)",
   },
   xsm: {
     paddingHorizontal: 2,

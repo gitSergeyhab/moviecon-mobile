@@ -8,7 +8,7 @@ import {
 import { ApiError } from "@/type/api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../";
-import { getGameId, getSelectedAnswerId } from "./selectors";
+import { getGameId } from "./selectors";
 import {
   AnswerStatus,
   GameStatus,
@@ -16,7 +16,6 @@ import {
   LevelResult,
   TestDict,
 } from "@/type/game";
-// import { gameActions } from ".";
 
 export const fetchLevelInfo = createAsyncThunk<
   {
@@ -79,14 +78,6 @@ export const fetchAnswerQuestion = createAsyncThunk<
     try {
       const gameId = getGameId(getState());
       const { questionId, variantId } = answerData;
-      // dispatch(gameActions.setSelectedAnswerId(variantId));
-
-      const selectedId = getSelectedAnswerId(getState());
-      console.log(
-        { gameId, selectedId },
-        "in thunk _________________________________________!!!"
-      );
-
       if (gameId === null) {
         throw new Error("Игра не найдена");
       }

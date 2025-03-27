@@ -1,8 +1,8 @@
 import { FC, useContext } from "react";
-import { Animated, Pressable, PressableProps, View } from "react-native";
+import { Animated, Pressable, PressableProps } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import ThemeContext from "@/lib/providers/ThemeProvider";
-import { OutputColorRangeDict, Theme } from "@/type/ui";
+import { OutputColorRangeDict } from "@/type/ui";
 import { radius } from "@/lib/configs/ui/sizes";
 
 const outputRangeDictDefault: OutputColorRangeDict = {

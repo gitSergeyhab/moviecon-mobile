@@ -14,8 +14,6 @@ const pickImage = async () => {
     quality: 0.7,
   });
 
-  console.log({ result });
-
   return result;
 };
 

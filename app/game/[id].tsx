@@ -12,8 +12,6 @@ export default function GameScreen() {
   const gameId = useSelector(gameSelectors.getGameId);
   const [isInfo, setIsInfo] = useState(true);
 
-  console.log({ gameStatus, gameId }, "GameScreen");
-
   useEffect(() => {
     let timer: NodeJS.Timeout | null = null;
     if (gameStatus === "IN_PROGRESS") {

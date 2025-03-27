@@ -7,9 +7,11 @@ export const Input = forwardRef<
   TextInput,
   TextInputProps & { size?: SizeType }
 >((props, ref) => {
-  const { size, ...rest } = props;
+  const { size, style, value = "", ...rest } = props;
   const sizeStyles = inputStylesDict[props.size ?? "medium"];
-  return <TextInput ref={ref} {...rest} style={{ ...sizeStyles }} />;
+  return (
+    <TextInput ref={ref} value={value} {...rest} style={[sizeStyles, style]} />
+  );
 });
 
 Input.displayName = "Input";

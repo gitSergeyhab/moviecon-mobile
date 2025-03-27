@@ -42,8 +42,6 @@ export const VariantsSection: FC<VariantsSectionProps> = ({
     setIsModalOpen(true);
   };
 
-  console.log({ variants });
-
   const handleAnswerClick = async (variantId: string | number) => {
     setSelectedAnswerId(variantId);
     dispatch(gameActions.setSelectedAnswerId(variantId));

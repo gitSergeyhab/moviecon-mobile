@@ -1,48 +1,32 @@
 import { useContext, useState } from "react";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { fetchExitGame, fetchSkipQuestion } from "@/store/game/thunks";
-import { ActivityIndicator, Text, View } from "react-native";
+import { View } from "react-native";
 import { IconButton } from "@/shared/components/Button/IconButton";
-import { NexGameAction } from "@/type/game";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 import { ControlsSectionModal } from "./ControlsSectionModal";
 import { styles } from "./styles";
 import {
+  exitBtnBg,
+  nexBtnBg,
   outputColorRangeDictExit,
   outputColorRangeDictNext,
 } from "./constants";
 import { useSelector } from "react-redux";
 import { gameSelectors } from "@/store/game";
+import { showToast } from "@/lib/utils/toasts";
 
 export const ControlsSection = () => {
   const options = useSelector(gameSelectors.getRemainingOptions);
-  // const isAnswerDone = useSelector(gameSelectors.getIsAnswerDone);
   const [isModalShown, setIsModalShown] = useState(false);
   const isLoading = useSelector(gameSelectors.getLoadingStatus) === "loading";
   const nexGameAction = useSelector(gameSelectors.getNexGameAction);
   const dispatch = useAppDispatch();
-
-  // const options = {
-  //   remainingErrors: 1,
-  //   remainingQuestions: 2,
-  //   remainingSkips: 3,
-  // };
-  // const isAnswerDone = false;
-  // const [isModalShown, setIsModalShown] = useState(false);
-  // const isLoading = false;
-  // const nexGameAction: NexGameAction | null = "NEXT_TEST";
-  // const dispatch = useAppDispatch();
-
   const { theme } = useContext(ThemeContext);
 
-  // if (isAnswerDone === null) {
-  //   console.error("невозможно получить статус вопроса");
-  //   return <Text>невозможно получить статус вопроса</Text>;
-  // }
-
   if (!options || !nexGameAction) {
-    console.error("невозможно получить данные уровня");
-    return <Text>невозможно получить данные уровня</Text>;
+    showToast({ message: "невозможно получить данные уровня" });
+    return null;
   }
 
   const isSkipQuestionBtnShow = options.remainingSkips > 0;
@@ -65,7 +49,7 @@ export const ControlsSection = () => {
         size={28}
         onPress={() => setIsModalShown(true)}
         outputRangeDict={outputColorRangeDictExit}
-        backgroundColor={theme === "dark" ? "#fff" : "#690c00"}
+        backgroundColor={exitBtnBg[theme]}
         paddingHorizontal={13}
       />
       {isSkipQuestionBtnShow && (
@@ -74,8 +58,7 @@ export const ControlsSection = () => {
           size={28}
           onPress={handleClickSkipBtn}
           outputRangeDict={outputColorRangeDictNext}
-          // disabled={isLoading || !isSkipQuestionBtnShow}
-          backgroundColor={theme === "dark" ? "#fff" : "#666666"}
+          backgroundColor={nexBtnBg[theme]}
           paddingHorizontal={13}
         />
       )}

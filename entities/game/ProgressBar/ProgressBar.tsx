@@ -1,6 +1,5 @@
 import { ProgressBarItem } from "./ProgressBarItem";
 import { View } from "react-native";
-import { AnswerStatus } from "@/type/game";
 import { styles } from "./styles";
 import { useSelector } from "react-redux";
 import { gameSelectors } from "@/store/game";
@@ -8,41 +7,7 @@ import { gameSelectors } from "@/store/game";
 export const ProgressBar = () => {
   const statuses = useSelector(gameSelectors.getAnswerStatuses);
   const testIndex = useSelector(gameSelectors.getCurrentTestIndex);
-  // const statuses: AnswerStatus[] = [
-  //   "correct",
-  //   "skipped",
-  //   "wrong",
-  //   "none",
-  //   "correct",
-  //   "skipped",
-  //   "wrong",
-  //   "none",
-  //   "correct",
-  //   "skipped",
-  //   "wrong",
-  //   "none",
-  //   "correct",
-  //   "skipped",
-  //   "wrong",
-  //   "none",
-  //   "correct",
-  //   "skipped",
-  //   "wrong",
-  //   "none",
-  //   "correct",
-  //   "skipped",
-  //   "wrong",
-  //   "none",
-  //   "correct",
-  //   // "skipped",
-  //   // "wrong",
-  //   // "none",
-  //   // "correct",
-  //   // "skipped",
-  //   // "wrong",
-  //   // "none",
-  // ];
-  // const testIndex = 3;
+
   if (!statuses) return null;
 
   return (

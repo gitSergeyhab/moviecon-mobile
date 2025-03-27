@@ -35,7 +35,6 @@ export const TablesSection: FC<TablesSectionProps> = ({
     return acc;
   }, [] as number[]);
 
-  console.log({ userRecordRowIndexes });
   const tableStyles = useGetDefaultTableStyle();
 
   if (isLoading) {
@@ -67,7 +66,6 @@ export const TablesSection: FC<TablesSectionProps> = ({
     score,
   ]);
 
-  console.log({ records });
   return (
     <View style={styles.tabsSectionContainer}>
       <Table

@@ -1,10 +1,10 @@
+import { UserRecords } from "@/features/profile/UserRecords/UserRecords";
 import { ScreenWrapper } from "@/shared/components/ScreenWrapper/ScreenWrapper";
-import { Profile } from "@/widgets/Profile/Profile";
 
 export default function ProfileScreen() {
   return (
     <ScreenWrapper>
-      <Profile />
+      <UserRecords />
     </ScreenWrapper>
   );
 }

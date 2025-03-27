@@ -74,8 +74,6 @@ const gameSlice = createSlice({
       state.loadingStatus = "failed";
     });
     builder.addCase(fetchStartLevel.fulfilled, (state, { payload }) => {
-      console.log("fetchStartLevel.fulfilled b", state.selectedAnswerId);
-
       state.loadingStatus = "success";
       const { gameStatus } = payload;
       state.gameStatus = gameStatus;
@@ -84,8 +82,6 @@ const gameSlice = createSlice({
       state.levelSkipped = 0;
       state.answerStatuses = state.levelTestsIds.map(() => "none");
       state.currentTestIndex = 0;
-      // state.selectedAnswerId = null;
-      console.log("fetchStartLevel.fulfilled a", state.selectedAnswerId);
     });
 
     builder.addCase(fetchAnswerQuestion.pending, (state) => {

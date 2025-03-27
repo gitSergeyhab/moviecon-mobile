@@ -26,11 +26,6 @@ export const UserRecords = () => {
     (games) => games?.length
   );
 
-  // console.log(
-  //   { results },
-  //   [commonGames, longGames, quickGames].map((games) => games?.length)
-  // );
-
   return (
     <>
       <ScreenHeader>Ваши рекорды</ScreenHeader>

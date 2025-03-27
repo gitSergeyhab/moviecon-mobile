@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+// TODO: не работает для мобилки - заменить по возможности
+
 const preloadImages = (images: string[]): Promise<void[]> => {
   return Promise.all(
     images.map((image) => {

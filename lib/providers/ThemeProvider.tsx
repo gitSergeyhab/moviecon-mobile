@@ -20,7 +20,6 @@ export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    // Load saved theme from storage
     const getTheme = async () => {
       try {
         const savedTheme = (await AsyncStorage.getItem("theme")) as Theme;
@@ -28,7 +27,7 @@ export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
           setTheme(savedTheme);
         }
       } catch (error) {
-        console.log("Error loading theme:", error);
+        console.error("Error loading theme:", error);
       }
     };
     getTheme();

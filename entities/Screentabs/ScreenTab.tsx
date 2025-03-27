@@ -16,6 +16,7 @@ export const createScreenTab = ({ iconName, name, title }: ScreenTabProps) => {
       name={name}
       options={{
         title,
+        headerShown: false,
         tabBarIcon: ({ color }) => (
           <IconSymbol size={28} name={iconName} color={color} />
         ),
