@@ -6,6 +6,7 @@ import { refreshToken } from "./refreshToken";
 import appRoutes from "../configs/routes/routes";
 import { clearTokens, getTokens, saveTokens } from "../utils/storage/tokens";
 import { router } from "expo-router";
+import { showToast } from "../utils/toasts";
 
 interface ErrorConfig extends InternalAxiosRequestConfig {
   is401: boolean;
@@ -14,9 +15,16 @@ const defaultHeaders = {
   "Content-type": "application/json",
 };
 
+const apiBaseUrl = ENV.apiBaseUrl;
+
 const createRequestInstance = (addAuthHeader: boolean): AppApi => {
+  if (!apiBaseUrl) {
+    showToast({
+      message: "API_BASE_URL is not defined",
+    });
+  }
   const instance = axios.create({
-    baseURL: ENV.apiBaseUrl,
+    baseURL: apiBaseUrl,
     headers: defaultHeaders,
   });
 
