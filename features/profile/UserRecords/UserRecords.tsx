@@ -7,6 +7,7 @@ import { indent } from "@/lib/configs/ui/sizes";
 import { Table } from "@/shared/components/Table/Table";
 import { ScreenHeader } from "@/shared/components/ui/texts";
 import { ScrollView, Text, View } from "react-native";
+import { styles } from "../styles";
 const categories = ["Стандартная Игра", "Большая Игра", "Быстрая Игра"];
 
 export const UserRecords = () => {
@@ -29,13 +30,7 @@ export const UserRecords = () => {
   return (
     <>
       <ScreenHeader>Ваши рекорды</ScreenHeader>
-      <ScrollView
-        style={{
-          marginTop: indent.x4,
-          paddingHorizontal: indent.x1,
-          width: "100%",
-        }}
-      >
+      <ScrollView style={styles.recordsScrollView}>
         {results.map((games, index) => (
           <View key={index} style={{ marginBottom: indent.x2 }}>
             <Text
@@ -56,6 +51,9 @@ export const UserRecords = () => {
             />
           </View>
         ))}
+        {results.length === 0 && (
+          <Text style={styles.noContentText}>Нет результатов</Text>
+        )}
       </ScrollView>
     </>
   );

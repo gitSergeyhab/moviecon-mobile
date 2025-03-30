@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useQueryUserResultsByLoadMore } from "@/hooks/useQueryUserResult";
 import { indent } from "@/lib/configs/ui/sizes";
 import { ScreenHeader } from "@/shared/components/ui/texts";
-import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import { Button } from "@/shared/components/Button/Button";
 import { AppTabs } from "@/entities/AppTabs/AppTabs";
 import { GameCategory, GameDuration } from "@/type/game";
@@ -10,7 +9,7 @@ import { categoryTabData, durationTabData } from "@/entities/AppTabs/constants";
 import { UserResultsTable } from "./UserResultsTable";
 import { Text, View } from "react-native";
 import { defaultQuery } from "./constants";
-import { showToast } from "@/lib/utils/toasts";
+import { styles } from "../styles";
 
 export const UserResults = () => {
   const [duration, setDuration] = useState<GameDuration | "none">("COMMON");
@@ -44,13 +43,7 @@ export const UserResults = () => {
     <>
       <ScreenHeader>Ваши рекорды</ScreenHeader>
       <View style={{ width: "100%" }}>
-        <View
-          style={{
-            flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-between",
-          }}
-        >
+        <View style={styles.tabContainer}>
           <AppTabs
             onPress={onClickAllCategories}
             selectedValue={category}
@@ -75,7 +68,7 @@ export const UserResults = () => {
           tabData={durationTabData}
         />
       </View>
-      <View style={{ height: "70%", width: "100%" }}>
+      <View style={styles.resultsTableContainer}>
         {count > 0 || isLoading ? (
           <UserResultsTable
             isLoading={isLoading}
@@ -83,15 +76,7 @@ export const UserResults = () => {
             results={results}
           />
         ) : (
-          <Text
-            style={{
-              textAlign: "center",
-              marginTop: indent.x4,
-              color: colorTheme.dark.text.accent,
-            }}
-          >
-            Нет результатов
-          </Text>
+          <Text style={styles.noContentText}>Нет результатов</Text>
         )}
         {count > 0 && count > results.length && (
           <Button
@@ -102,9 +87,6 @@ export const UserResults = () => {
             Загрузить еще
           </Button>
         )}
-        <Button onPress={() => showToast({ message: "Тестовое сообщение" })}>
-          Button
-        </Button>
       </View>
     </>
   );

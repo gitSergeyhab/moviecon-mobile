@@ -13,8 +13,6 @@ import { btnTextStyles, buttonStylesDict } from "./styles";
 import { colorTheme } from "@/lib/configs/ui/colorTheme";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 
-// // native3@test.com
-
 export interface ButtonProps extends PressableProps {
   size?: SizeType;
   children?: ReactNode;

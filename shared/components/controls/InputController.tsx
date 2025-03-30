@@ -30,12 +30,6 @@ export const InputController = <T extends FieldValues>({
       control={control}
       render={({ field }) => (
         <Input {...field} {...props} onChangeText={field.onChange} />
-        // <Input
-        //   {...props}
-        //   value={field.value} // Явно передаём value
-        //   onChangeText={field.onChange}
-        //   onBlur={field.onBlur} // Добавляем onBlur для react-hook-form
-        // />
       )}
     />
     <FieldError error={error} />

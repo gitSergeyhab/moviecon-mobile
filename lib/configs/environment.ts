@@ -1,6 +1,3 @@
-import Constants from "expo-constants";
-
-const apiBaseUrl =
-  Constants.manifest2?.extra?.apiUrl || "TODO: replace with your api url!!!";
+const apiBaseUrl = process.env.EXPO_PUBLIC_API_URL || "";
 
 export const ENV = { apiBaseUrl };

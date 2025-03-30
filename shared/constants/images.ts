@@ -66,7 +66,6 @@ export const gameStatusImages: Record<GameStatus, string[]> = {
 
 const path = "@/assets/images/sd/";
 
-// Создаем объект, который сопоставляет имена файлов с их путями
 export const imagePaths: Record<string, string> = {
   "couple-neutral-1": require(`${path}couple-neutral-1.webp`),
   "couple-neutral-2": require(`${path}couple-neutral-2.webp`),

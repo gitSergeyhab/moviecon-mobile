@@ -3,15 +3,6 @@ import { View } from "react-native";
 import { IconButton } from "@/shared/components/Button/IconButton";
 import ThemeContext from "@/lib/providers/ThemeProvider";
 import { styles } from "./styles";
-// !!!!!!!!!!!!!!
-// const sizeDict: Record<
-//   SizeType,
-//   { indent: number; coloredSize: number; iconSize: number }
-// > = {
-//   large: { coloredSize: 100, iconSize: 45, indent: -40 },
-//   medium: { coloredSize: 100, iconSize: 45, indent: -40 },
-//   small: { coloredSize: 100, iconSize: 45, indent: -40 },
-// };
 
 export interface GameQuestionImageZoomButtonProps {
   onImagePress: VoidFunction;

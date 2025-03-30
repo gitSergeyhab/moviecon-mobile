@@ -1,6 +1,7 @@
 import { UseFormSetError, Path } from "react-hook-form";
 import { ApiError, ApiResponse } from "@/type/api";
 import { showToast } from "./toasts";
+
 type StringDict = Record<string, string>;
 
 export const getErrorMessage = (response: ApiResponse): string => {
